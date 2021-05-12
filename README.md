@@ -7,6 +7,13 @@ Check the Releases section to download the calculator.
   Basically calculates the expected amount of xp you'd get from era enemies.
   The form is pretty straightforward.
  
+ 
+## ElementDisableCalc  NEW!!
+  Calculates the cost of elemental disables based off the base cost.
+  This utility assumes that all elements' base cost is the same.
+  
+ If you need to know what the cost of an element as your nth disable is, enter in your base cost and click calculate and match the corresponding values. (I don't have a proficiency at explaining things ;-;)
+ 
 
 ## ClearSpeedCalculator
  ### Helps calculate your average clearspeed based on:
