@@ -14,6 +14,8 @@ Check the Releases section to download the calculator.
   
  If you need to know what the cost of an element as your nth disable is, enter in your base cost and click calculate and match the corresponding values. (I don't have a proficiency at explaining things ;-;)
  
+  Notation for large numbers returned from the calculation is Scientific (default)
+ 
 
 ## ClearSpeedCalculator
  ### Helps calculate your average clearspeed based on:
