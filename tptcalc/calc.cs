@@ -14,7 +14,7 @@ namespace tptcalc
 			double xpB = 1 + Mod2Bonus(int.Parse(xpmod.Value.ToString()));
 
 			// (0.5 + rand(0,1) + era^0.2) * xpB
-			Random random = new Random();
+			Random random = new Random(); //if you wanna use the random function
 			double rand = random.Next(0, 100)/100; //for simplicity and rounding sake
 			
 			LowX.Text = ((0.5 + Math.Pow(era, 0.2)) * xpB).ToString();
@@ -66,15 +66,33 @@ namespace tptcalc
 					return 4;
 				case 6: case 9: case 14:
 					return 5;
-				case 2: case 10: case 11: case 12: case 13:
+				case 2: case 10: case 11: case 13:
 					return 6;
 				case 8:
 					return 7;
+				case 12:
+					return 9;
 				default: //case 15:
 					return 10;
 			}
 		}
 
+
+
+		public void EDC(int Cost, int n, TextBox D2, TextBox D3, TextBox D4, TextBox D5, TextBox DN)
+		{
+			D2.Text = Cost2Disable(Cost, 2).ToString();
+			D3.Text = Cost2Disable(Cost, 3).ToString();
+			D4.Text = Cost2Disable(Cost, 4).ToString();
+			D5.Text = Cost2Disable(Cost, 5).ToString();
+			DN.Text = Cost2Disable(Cost, n).ToString();
+		}
+
+		private double Cost2Disable (int cost, int nth)
+		{
+			double value = cost*(Math.Pow((cost +(1000-cost)/10),nth-1));//X * ( X + ( ( 1000 - X ) / 10 ) ^ ( n - 1 ) ) 
+			return value;
+		}
 
 	}
 }

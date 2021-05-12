@@ -58,5 +58,14 @@ namespace tptcalc
 			}
 
 		}
+
+		private void btnDisableCalc_Click(object sender, EventArgs e)
+		{
+			//nothing to validate here, just numbers
+			int baseC = int.Parse(numBaseDC.Value.ToString()),
+				nthD = int.Parse(numDisableN.Value.ToString());
+
+			calc.EDC(baseC, nthD, txtIterEDC2, txtIterEDC3, txtIterEDC4, txtIterEDC5, txtIterEDCn);
+		}
 	}
 }
