@@ -6,6 +6,7 @@ Check the Releases section to download the calculator.
 ## EraXPCalculator
   Basically calculates the expected amount of xp you'd get from era enemies.
   The form is pretty straightforward.
+  #### The xp formula only works on era, so if you are in inf1 era1, the formula in game assumes you are at era1
  
  
 ## ElementDisableCalc  NEW!!
@@ -21,7 +22,7 @@ Check the Releases section to download the calculator.
  ### Helps calculate your average clearspeed based on:
   - Your total Enemy kills in the run.
   - How long you were in that run (in game time).
-    - if you're using real time, divide the result by 2.
+    - if you're using real time, please click the checkbox before pressing Calculate.
   - Which region you're in.
   
    Note: The result of the calculation will be more accurate with more kills and time spent in the run.
