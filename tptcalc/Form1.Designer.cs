@@ -59,21 +59,22 @@
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.label13 = new System.Windows.Forms.Label();
-			this.numBaseDC = new System.Windows.Forms.NumericUpDown();
-			this.label14 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.txtIterEDC2 = new System.Windows.Forms.TextBox();
-			this.txtIterEDC3 = new System.Windows.Forms.TextBox();
-			this.txtIterEDC4 = new System.Windows.Forms.TextBox();
-			this.txtIterEDC5 = new System.Windows.Forms.TextBox();
-			this.label17 = new System.Windows.Forms.Label();
+			this.btnDisableCalc = new System.Windows.Forms.Button();
+			this.numDisableN = new System.Windows.Forms.NumericUpDown();
 			this.txtIterEDCn = new System.Windows.Forms.TextBox();
 			this.label18 = new System.Windows.Forms.Label();
-			this.numDisableN = new System.Windows.Forms.NumericUpDown();
-			this.btnDisableCalc = new System.Windows.Forms.Button();
+			this.txtIterEDC5 = new System.Windows.Forms.TextBox();
+			this.label17 = new System.Windows.Forms.Label();
+			this.txtIterEDC4 = new System.Windows.Forms.TextBox();
+			this.txtIterEDC3 = new System.Windows.Forms.TextBox();
+			this.txtIterEDC2 = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.numBaseDC = new System.Windows.Forms.NumericUpDown();
+			this.label13 = new System.Windows.Forms.Label();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.chkRTcspd = new System.Windows.Forms.CheckBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
 			this.groupBox2.SuspendLayout();
@@ -84,9 +85,9 @@
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.groupBox3.SuspendLayout();
-			this.tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numDisableN)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
+			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -214,6 +215,7 @@
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.chkRTcspd);
 			this.groupBox2.Controls.Add(this.numS);
 			this.groupBox2.Controls.Add(this.numM);
 			this.groupBox2.Controls.Add(this.numH);
@@ -272,9 +274,9 @@
 			// 
 			// btnCSpd
 			// 
-			this.btnCSpd.Location = new System.Drawing.Point(137, 200);
+			this.btnCSpd.Location = new System.Drawing.Point(218, 200);
 			this.btnCSpd.Name = "btnCSpd";
-			this.btnCSpd.Size = new System.Drawing.Size(75, 23);
+			this.btnCSpd.Size = new System.Drawing.Size(75, 21);
 			this.btnCSpd.TabIndex = 8;
 			this.btnCSpd.Text = "Calculate";
 			this.btnCSpd.UseVisualStyleBackColor = true;
@@ -348,12 +350,14 @@
 			// 
 			// label8
 			// 
+			this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(60, 97);
+			this.label8.Location = new System.Drawing.Point(71, 96);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(228, 26);
+			this.label8.Size = new System.Drawing.Size(201, 26);
 			this.label8.TabIndex = 7;
-			this.label8.Text = "Game time in current run in Hours and Minutes \r\n(Optional for seconds)";
+			this.label8.Text = "Time in current run in Hours and Minutes \r\n(Optional for seconds)";
+			this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// txtKills
 			// 
@@ -435,132 +439,15 @@
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "ElementDisableCalculator";
 			// 
-			// tabPage2
+			// btnDisableCalc
 			// 
-			this.tabPage2.Controls.Add(this.groupBox2);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(665, 293);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Optimization Utilities";
-			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(56, 41);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(93, 13);
-			this.label13.TabIndex = 0;
-			this.label13.Text = "Base Disable Cost";
-			// 
-			// numBaseDC
-			// 
-			this.numBaseDC.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.numBaseDC.Location = new System.Drawing.Point(161, 39);
-			this.numBaseDC.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			this.numBaseDC.Name = "numBaseDC";
-			this.numBaseDC.Size = new System.Drawing.Size(120, 20);
-			this.numBaseDC.TabIndex = 1;
-			this.numBaseDC.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(48, 68);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(102, 13);
-			this.label14.TabIndex = 2;
-			this.label14.Text = "Cost for 2nd Disable";
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(90, 94);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(60, 13);
-			this.label15.TabIndex = 3;
-			this.label15.Text = "3rd Disable";
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(89, 120);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(60, 13);
-			this.label16.TabIndex = 4;
-			this.label16.Text = "4th Disable";
-			// 
-			// txtIterEDC2
-			// 
-			this.txtIterEDC2.Location = new System.Drawing.Point(161, 65);
-			this.txtIterEDC2.Name = "txtIterEDC2";
-			this.txtIterEDC2.ReadOnly = true;
-			this.txtIterEDC2.Size = new System.Drawing.Size(100, 20);
-			this.txtIterEDC2.TabIndex = 5;
-			// 
-			// txtIterEDC3
-			// 
-			this.txtIterEDC3.Location = new System.Drawing.Point(161, 91);
-			this.txtIterEDC3.Name = "txtIterEDC3";
-			this.txtIterEDC3.ReadOnly = true;
-			this.txtIterEDC3.Size = new System.Drawing.Size(100, 20);
-			this.txtIterEDC3.TabIndex = 6;
-			// 
-			// txtIterEDC4
-			// 
-			this.txtIterEDC4.Location = new System.Drawing.Point(161, 117);
-			this.txtIterEDC4.Name = "txtIterEDC4";
-			this.txtIterEDC4.ReadOnly = true;
-			this.txtIterEDC4.Size = new System.Drawing.Size(100, 20);
-			this.txtIterEDC4.TabIndex = 7;
-			// 
-			// txtIterEDC5
-			// 
-			this.txtIterEDC5.Location = new System.Drawing.Point(161, 143);
-			this.txtIterEDC5.Name = "txtIterEDC5";
-			this.txtIterEDC5.ReadOnly = true;
-			this.txtIterEDC5.Size = new System.Drawing.Size(100, 20);
-			this.txtIterEDC5.TabIndex = 9;
-			// 
-			// label17
-			// 
-			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(89, 146);
-			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(60, 13);
-			this.label17.TabIndex = 8;
-			this.label17.Text = "5th Disable";
-			// 
-			// txtIterEDCn
-			// 
-			this.txtIterEDCn.Location = new System.Drawing.Point(161, 169);
-			this.txtIterEDCn.Name = "txtIterEDCn";
-			this.txtIterEDCn.ReadOnly = true;
-			this.txtIterEDCn.Size = new System.Drawing.Size(129, 20);
-			this.txtIterEDCn.TabIndex = 11;
-			// 
-			// label18
-			// 
-			this.label18.AutoSize = true;
-			this.label18.Location = new System.Drawing.Point(95, 172);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(54, 13);
-			this.label18.TabIndex = 10;
-			this.label18.Text = "th Disable";
+			this.btnDisableCalc.Location = new System.Drawing.Point(123, 209);
+			this.btnDisableCalc.Name = "btnDisableCalc";
+			this.btnDisableCalc.Size = new System.Drawing.Size(75, 23);
+			this.btnDisableCalc.TabIndex = 102;
+			this.btnDisableCalc.Text = "Calculate";
+			this.btnDisableCalc.UseVisualStyleBackColor = true;
+			this.btnDisableCalc.Click += new System.EventHandler(this.btnDisableCalc_Click);
 			// 
 			// numDisableN
 			// 
@@ -585,15 +472,142 @@
             0,
             0});
 			// 
-			// btnDisableCalc
+			// txtIterEDCn
 			// 
-			this.btnDisableCalc.Location = new System.Drawing.Point(123, 209);
-			this.btnDisableCalc.Name = "btnDisableCalc";
-			this.btnDisableCalc.Size = new System.Drawing.Size(75, 23);
-			this.btnDisableCalc.TabIndex = 102;
-			this.btnDisableCalc.Text = "Calculate";
-			this.btnDisableCalc.UseVisualStyleBackColor = true;
-			this.btnDisableCalc.Click += new System.EventHandler(this.btnDisableCalc_Click);
+			this.txtIterEDCn.Location = new System.Drawing.Point(161, 169);
+			this.txtIterEDCn.Name = "txtIterEDCn";
+			this.txtIterEDCn.ReadOnly = true;
+			this.txtIterEDCn.Size = new System.Drawing.Size(129, 20);
+			this.txtIterEDCn.TabIndex = 11;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Location = new System.Drawing.Point(95, 172);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(54, 13);
+			this.label18.TabIndex = 10;
+			this.label18.Text = "th Disable";
+			// 
+			// txtIterEDC5
+			// 
+			this.txtIterEDC5.Location = new System.Drawing.Point(161, 143);
+			this.txtIterEDC5.Name = "txtIterEDC5";
+			this.txtIterEDC5.ReadOnly = true;
+			this.txtIterEDC5.Size = new System.Drawing.Size(100, 20);
+			this.txtIterEDC5.TabIndex = 9;
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Location = new System.Drawing.Point(89, 146);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(60, 13);
+			this.label17.TabIndex = 8;
+			this.label17.Text = "5th Disable";
+			// 
+			// txtIterEDC4
+			// 
+			this.txtIterEDC4.Location = new System.Drawing.Point(161, 117);
+			this.txtIterEDC4.Name = "txtIterEDC4";
+			this.txtIterEDC4.ReadOnly = true;
+			this.txtIterEDC4.Size = new System.Drawing.Size(100, 20);
+			this.txtIterEDC4.TabIndex = 7;
+			// 
+			// txtIterEDC3
+			// 
+			this.txtIterEDC3.Location = new System.Drawing.Point(161, 91);
+			this.txtIterEDC3.Name = "txtIterEDC3";
+			this.txtIterEDC3.ReadOnly = true;
+			this.txtIterEDC3.Size = new System.Drawing.Size(100, 20);
+			this.txtIterEDC3.TabIndex = 6;
+			// 
+			// txtIterEDC2
+			// 
+			this.txtIterEDC2.Location = new System.Drawing.Point(161, 65);
+			this.txtIterEDC2.Name = "txtIterEDC2";
+			this.txtIterEDC2.ReadOnly = true;
+			this.txtIterEDC2.Size = new System.Drawing.Size(100, 20);
+			this.txtIterEDC2.TabIndex = 5;
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(89, 120);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(60, 13);
+			this.label16.TabIndex = 4;
+			this.label16.Text = "4th Disable";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(90, 94);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(60, 13);
+			this.label15.TabIndex = 3;
+			this.label15.Text = "3rd Disable";
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(48, 68);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(102, 13);
+			this.label14.TabIndex = 2;
+			this.label14.Text = "Cost for 2nd Disable";
+			// 
+			// numBaseDC
+			// 
+			this.numBaseDC.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.numBaseDC.Location = new System.Drawing.Point(161, 39);
+			this.numBaseDC.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.numBaseDC.Name = "numBaseDC";
+			this.numBaseDC.Size = new System.Drawing.Size(120, 20);
+			this.numBaseDC.TabIndex = 1;
+			this.numBaseDC.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Location = new System.Drawing.Point(56, 41);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(93, 13);
+			this.label13.TabIndex = 0;
+			this.label13.Text = "Base Disable Cost";
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Controls.Add(this.groupBox2);
+			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(665, 293);
+			this.tabPage2.TabIndex = 1;
+			this.tabPage2.Text = "Optimization Utilities";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// chkRTcspd
+			// 
+			this.chkRTcspd.AutoSize = true;
+			this.chkRTcspd.Location = new System.Drawing.Point(51, 203);
+			this.chkRTcspd.Name = "chkRTcspd";
+			this.chkRTcspd.Size = new System.Drawing.Size(149, 17);
+			this.chkRTcspd.TabIndex = 100;
+			this.chkRTcspd.Text = "Calculate using Real Time";
+			this.chkRTcspd.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
@@ -618,9 +632,9 @@
 			this.tabPage1.ResumeLayout(false);
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
-			this.tabPage2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numDisableN)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).EndInit();
+			this.tabPage2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -674,6 +688,7 @@
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.NumericUpDown numBaseDC;
 		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.CheckBox chkRTcspd;
 	}
 }
 

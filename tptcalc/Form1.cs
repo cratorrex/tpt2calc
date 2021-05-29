@@ -23,8 +23,8 @@ namespace tptcalc
 		private void btnCalculateXP_Click(object sender, EventArgs e)
 		{
 			//validates txtera is between 0 and 100B
-			int era;
-			if (int.TryParse(txtEra.Text, out era)&&era>=0&&era<1000000000)
+			long era;
+			if (long.TryParse(txtEra.Text, out era)&&era>=0&&era<100000000000)
 			{
 				calc.CXP(era, numXPLvl, txtLowXP, txtHighXP, txtAveXP, rtbReturn);
 			}
@@ -41,6 +41,9 @@ namespace tptcalc
 
 			//validating time is > 0 seconds
 			double time = double.Parse(numH.Value.ToString()) * 3600 + double.Parse(numM.Value.ToString()) * 60 + double.Parse(numS.Value.ToString());
+
+			if (chkRTcspd.Checked)
+			{ time *= 2; }
 
 			if (time == 0)//if time is negative or zero... since you can't divide by 0
 			{

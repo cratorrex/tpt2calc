@@ -9,7 +9,7 @@ namespace tptcalc
 {
 	public class calc
 	{
-		public void CXP(int era, NumericUpDown xpmod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox error)
+		public void CXP(long era, NumericUpDown xpmod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox error)
 		{
 			double xpB = 1 + Mod2Bonus(int.Parse(xpmod.Value.ToString()));
 
