@@ -6,7 +6,7 @@ Check the Releases section to download the calculator.
 ## EraXPCalculator
   Basically calculates the expected amount of xp you'd get from era enemies.
   The form is pretty straightforward.
-  #### The xp formula only works on era, so if you are in inf1 era1, the formula in game assumes you are at era1
+  ###### The xp formula only works on era, so if you are in inf1 era1, the formula in game assumes you are at era1
  
  
 ## ElementDisableCalc  NEW!!
