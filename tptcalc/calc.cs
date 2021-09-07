@@ -9,13 +9,13 @@ namespace tptcalc
 {
 	public class calc
 	{
-		public void CXP(long era, NumericUpDown xpmod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox error)
+		public void CXP(long era, NumericUpDown xpmod, TextBox LowX, TextBox HighX, TextBox AveX)
 		{
 			double xpB = 1 + Mod2Bonus(int.Parse(xpmod.Value.ToString()));
 
 			// (0.5 + rand(0,1) + era^0.2) * xpB
-			Random random = new Random(); //if you wanna use the random function
-			double rand = random.Next(0, 100)/100; //for simplicity and rounding sake
+			//Random random = new Random(); //if you wanna use the random function
+			//double rand = random.Next(0, 100)/100; //for simplicity and rounding sake
 			
 			LowX.Text = ((0.5 + Math.Pow(era, 0.2)) * xpB).ToString();
 			HighX.Text = ((1.5 + Math.Pow(era, 0.2)) * xpB).ToString();
@@ -47,11 +47,18 @@ namespace tptcalc
 
 
 
-		public void CSP(int kills, double time, NumericUpDown regNo, TextBox cspd, RichTextBox error)
+		public void CSP(long kills, double time, NumericUpDown regNo, TextBox cspd, CheckBox chkElement)
 		{
-			int paths = Reg2Paths(int.Parse(regNo.Value.ToString()));
+			int regions = int.Parse(regNo.Value.ToString());
+			int paths = Reg2Paths(regions);
+			int elements = 1; //initialised if the checkbox wasn't checked
 
-			double cSpd = kills / (time * paths);
+            if (chkElement.Checked)
+            {
+				elements = Reg2Elements(regions);
+            }
+
+			double cSpd = (kills*elements) / (time * paths);
 
 			cspd.Text = cSpd.ToString() + "  clears/sec";
 		}
@@ -77,6 +84,27 @@ namespace tptcalc
 			}
 		}
 
+		private int Reg2Elements(int regNo)
+        {
+			switch (regNo)
+            {
+				case 11:
+					return 2;
+				case 1: case 2:
+					return 4;
+				case 10: case 12:
+					return 5;
+				case 3:	case 13:
+					return 6;
+				case 4:	case 5: case 6:	case 7:	case 8:	case 9:
+					return 7;
+				case 14:
+					return 8;
+				default: //case 15:
+					return 10;
+
+            }
+        }
 
 
 		public void EDC(int Cost, int n, TextBox D2, TextBox D3, TextBox D4, TextBox D5, TextBox DN)
