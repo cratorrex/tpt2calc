@@ -1,6 +1,6 @@
 # tpt2eracalc
 Check the Releases section to download the calculator.
-##### `Update 0.3MPA` allows support for "short named" and "scientific" notations! `NEW!!`
+##### `Update 0.3MPA` allows support for "short named" and "scientific" notations! (on top of full notation) `NEW!!`
 ###### Unsure of how to make it into a web application so if anyone wants to, feel free!
 
 
