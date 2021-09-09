@@ -25,7 +25,7 @@ Check the Releases section to download the calculator.
     - or allow the calculator to approximate kills based on one element's kill count
   - How long you were in that run `in game time`.
     - <s>if you're using real time, please click the checkbox before pressing Calculate.</s>
-      - (removed in `0.3MPA`. sorry for any inconveniences caused. ping me `@cratorrex.rx#3589` if you want me to add it back)
+      - (removed in `0.3MPA`. sorry for any inconveniences caused. ping me `@cratorrex.rx#3589` on discord if you want me to add it back)
   - Which region you're in.
   
    Note: The result of the calculation will be more accurate with more kills and time spent in the run.
