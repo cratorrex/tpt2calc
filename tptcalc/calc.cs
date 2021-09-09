@@ -9,18 +9,27 @@ namespace tptcalc
 {
 	public class calc
 	{
-		public void CXP(long era, NumericUpDown xpmod, TextBox LowX, TextBox HighX, TextBox AveX)
+		public void CXP(long era, long dropstat, NumericUpDown xpmod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug)
 		{
 			double xpB = 1 + Mod2Bonus(int.Parse(xpmod.Value.ToString()));
+			//debug.AppendText(Math.Pow(dropstat, 0.05).ToString() + Environment.NewLine); //(checked as correct)
 
 			// (0.5 + rand(0,1) + era^0.2) * xpB
 			//Random random = new Random(); //if you wanna use the random function
 			//double rand = random.Next(0, 100)/100; //for simplicity and rounding sake
 			
-			LowX.Text = ((0.5 + Math.Pow(era, 0.2)) * xpB).ToString();
-			HighX.Text = ((1.5 + Math.Pow(era, 0.2)) * xpB).ToString();
-			AveX.Text = ((1 + Math.Pow(era, 0.2)) * xpB).ToString();
+			LowX.Text = CXPF(0.5).ToString();
+			HighX.Text = CXPF(1.5).ToString();
+			AveX.Text = CXPF(1).ToString();
+
+			double CXPF(double ave)
+			{
+				double E = ((ave + Math.Pow(era, 0.2)) * xpB * Math.Pow(dropstat, 0.05));
+				return E;
+			}
+
 		}
+
 
 		private double Mod2Bonus(int mod)
 		{

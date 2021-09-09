@@ -12,7 +12,7 @@ namespace tptcalc
     {
         RichTextBox error;
 
-        public long CheckConvert(TextBox txtInput, RichTextBox rAppend)
+        public long CheckConvert(TextBox txtInput, RichTextBox rAppend, bool show)
         {
             error = rAppend;
             string input = txtInput.Text;
@@ -27,18 +27,23 @@ namespace tptcalc
             }
 
             //checks for short named (counts up to Trillions, may update with more)
-            else if (input.EndsWith("K") || input.EndsWith("k") || input.EndsWith("M") || input.EndsWith("m") || input.EndsWith("B") || input.EndsWith("b") || input.EndsWith("T") || input.EndsWith("t"))
+            else if (input.EndsWith("K") || input.EndsWith("k") || input.EndsWith("M") || input.EndsWith("m")
+                || input.EndsWith("B") || input.EndsWith("b") || input.EndsWith("T") || input.EndsWith("t")
+                || input.EndsWith("QA") || input.EndsWith("Qa") || input.EndsWith("qA") || input.EndsWith("qa")
+                || input.EndsWith("QI") || input.EndsWith("Qi") || input.EndsWith("qI") || input.EndsWith("qi"))
             {
                 output = SNamed(input);
                 //rAppend.AppendText("convert.cs: Input converted to " + output + Environment.NewLine);
                 return output;
             }
 
-            else if (long.TryParse(input, out _) == false)
+            else if (long.TryParse(input, out _) == false && show)
             {
                 rAppend.AppendText("convert.cs: Input could not be recognised." + Environment.NewLine);
                 return 0;
             }
+
+            else if (show == false) return 0;
 
             else
             {
@@ -78,6 +83,13 @@ namespace tptcalc
 
                 if (input.EndsWith("t") || input.EndsWith("T"))
                     output = Math.Round((Convert.ToDecimal(input.TrimEnd('t', 'T')) * 1000000000000), 0);
+
+                if (input.EndsWith("qa") || input.EndsWith("Qa") || input.EndsWith("qA") || input.EndsWith("QA"))
+                    output = Math.Round((Convert.ToDecimal(input.TrimEnd('q', 'a', 'Q', 'A')) * 1000000000000000), 0);
+
+                if (input.EndsWith("QI") || input.EndsWith("Qi") || input.EndsWith("qI") || input.EndsWith("qi"))
+                    output = Math.Round((Convert.ToDecimal(input.TrimEnd('q', 'i', 'Q', 'I')) * 1000000000000000000), 0);
+
             }
 
             catch

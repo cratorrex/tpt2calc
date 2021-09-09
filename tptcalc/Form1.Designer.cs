@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCalculateXP = new System.Windows.Forms.Button();
@@ -35,6 +36,8 @@
             this.txtHighXP = new System.Windows.Forms.TextBox();
             this.txtAveXP = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEraXPDropStat = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtEra = new System.Windows.Forms.TextBox();
             this.numXPLvl = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,6 +78,13 @@
             this.numBaseDC = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ttRDrop = new System.Windows.Forms.ToolTip(this.components);
+            this.ttNamedConvert = new System.Windows.Forms.ToolTip(this.components);
+            this.lblConvert = new System.Windows.Forms.Label();
+            this.ttxpBL = new System.Windows.Forms.ToolTip(this.components);
+            this.ttCV = new System.Windows.Forms.ToolTip(this.components);
+            this.lblCV = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -88,12 +98,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 54);
+            this.label1.Location = new System.Drawing.Point(92, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 0;
@@ -102,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 97);
+            this.label2.Location = new System.Drawing.Point(59, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 13);
             this.label2.TabIndex = 1;
@@ -110,7 +121,7 @@
             // 
             // btnCalculateXP
             // 
-            this.btnCalculateXP.Location = new System.Drawing.Point(125, 151);
+            this.btnCalculateXP.Location = new System.Drawing.Point(125, 164);
             this.btnCalculateXP.Name = "btnCalculateXP";
             this.btnCalculateXP.Size = new System.Drawing.Size(75, 23);
             this.btnCalculateXP.TabIndex = 2;
@@ -144,6 +155,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtEraXPDropStat);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtEra);
             this.groupBox1.Controls.Add(this.numXPLvl);
             this.groupBox1.Controls.Add(this.label5);
@@ -162,16 +175,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "EnemyXPCalculator";
             // 
+            // txtEraXPDropStat
+            // 
+            this.txtEraXPDropStat.Location = new System.Drawing.Point(191, 126);
+            this.txtEraXPDropStat.Name = "txtEraXPDropStat";
+            this.txtEraXPDropStat.Size = new System.Drawing.Size(100, 20);
+            this.txtEraXPDropStat.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 129);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(155, 13);
+            this.label7.TabIndex = 100;
+            this.label7.Text = "Resource Drops (Enemies) Stat";
+            // 
             // txtEra
             // 
-            this.txtEra.Location = new System.Drawing.Point(134, 51);
+            this.txtEra.Location = new System.Drawing.Point(134, 47);
             this.txtEra.Name = "txtEra";
             this.txtEra.Size = new System.Drawing.Size(100, 20);
             this.txtEra.TabIndex = 0;
             // 
             // numXPLvl
             // 
-            this.numXPLvl.Location = new System.Drawing.Point(189, 95);
+            this.numXPLvl.Location = new System.Drawing.Point(189, 90);
             this.numXPLvl.Maximum = new decimal(new int[] {
             25,
             0,
@@ -232,7 +261,7 @@
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(343, 261);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabIndex = 200;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ClearSpeedCalculator (CSpeedCalc)";
             // 
@@ -389,7 +418,7 @@
             // 
             // rtbReturn
             // 
-            this.rtbReturn.Location = new System.Drawing.Point(12, 377);
+            this.rtbReturn.Location = new System.Drawing.Point(12, 393);
             this.rtbReturn.Name = "rtbReturn";
             this.rtbReturn.Size = new System.Drawing.Size(673, 85);
             this.rtbReturn.TabIndex = 99;
@@ -398,7 +427,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 361);
+            this.label6.Location = new System.Drawing.Point(18, 377);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 6;
@@ -408,7 +437,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 43);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(673, 319);
@@ -609,11 +638,42 @@
             this.tabPage2.Text = "Optimization Utilities";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // lblConvert
+            // 
+            this.lblConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblConvert.AutoSize = true;
+            this.lblConvert.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblConvert.Location = new System.Drawing.Point(466, 6);
+            this.lblConvert.Name = "lblConvert";
+            this.lblConvert.Size = new System.Drawing.Size(202, 15);
+            this.lblConvert.TabIndex = 100;
+            this.lblConvert.Text = "Hover over me for help with conversions!";
+            // 
+            // lblCV
+            // 
+            this.lblCV.AutoSize = true;
+            this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCV.Location = new System.Drawing.Point(5, 6);
+            this.lblCV.Name = "lblCV";
+            this.lblCV.Size = new System.Drawing.Size(97, 15);
+            this.lblCV.TabIndex = 101;
+            this.lblCV.Text = "Version: 0.3MPA.1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblConvert);
+            this.panel1.Controls.Add(this.lblCV);
+            this.panel1.Location = new System.Drawing.Point(12, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(673, 30);
+            this.panel1.TabIndex = 102;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 474);
+            this.ClientSize = new System.Drawing.Size(697, 490);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rtbReturn);
@@ -636,6 +696,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -690,6 +752,15 @@
 		private System.Windows.Forms.NumericUpDown numBaseDC;
 		private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox chkCSPD1Element;
+        private System.Windows.Forms.TextBox txtEraXPDropStat;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolTip ttRDrop;
+        private System.Windows.Forms.ToolTip ttNamedConvert;
+        private System.Windows.Forms.Label lblConvert;
+        private System.Windows.Forms.ToolTip ttxpBL;
+        private System.Windows.Forms.ToolTip ttCV;
+        private System.Windows.Forms.Label lblCV;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
