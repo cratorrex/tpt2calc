@@ -9,9 +9,10 @@ namespace tptcalc
 {
 	public class calc
 	{
-		public void CXP(long era, long dropstat, NumericUpDown xpmod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug)
+		public void CXP(long era, long dropstat, NumericUpDown xpmod, NumericUpDown awamod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug)
 		{
-			double xpB = 1 + Mod2Bonus(int.Parse(xpmod.Value.ToString()));
+			double xpB = 1 + Mod2Bonus_XPB(int.Parse(xpmod.Value.ToString()));
+			double awaB = 1 + Mod2Bonus_AWA(int.Parse(awamod.Value.ToString()));
 			//debug.AppendText(Math.Pow(dropstat, 0.05).ToString() + Environment.NewLine); //(checked as correct)
 
 			// (0.5 + rand(0,1) + era^0.2) * xpB
@@ -24,14 +25,14 @@ namespace tptcalc
 
 			double CXPF(double ave)
 			{
-				double E = ((ave + Math.Pow(era, 0.2)) * xpB * Math.Pow(dropstat, 0.05));
+				double E = ((ave + Math.Pow(era, 0.2)) * xpB * awaB * Math.Pow(dropstat, 0.05));
 				return E;
 			}
 
 		}
 
 
-		private double Mod2Bonus(int mod)
+		private double Mod2Bonus_XPB(int mod)
 		{
 			switch (mod)
 			{
@@ -50,9 +51,27 @@ namespace tptcalc
 				default: //between 6 and 25
 					return (0.185 + (mod*0.1));
 			}
-
-
 		}
+
+		private double Mod2Bonus_AWA(int mod)
+        {
+            switch (mod) //120sec cooldown
+            {
+				case 1:
+					return 0.3; //up for 35 sec
+				case 2:
+					return 0.5; //up for 40 sec
+				case 3:
+					return 0.7; //up for 45 sec
+				case 4:
+					return 1.0; //up for 55 sec
+				case 5:
+					return 1.2; //up for 60 sec
+
+				default: //if 0
+					return 0;
+			}
+        }
 
 
 

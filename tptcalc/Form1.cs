@@ -31,7 +31,7 @@ namespace tptcalc
 
 			if (era >= 0 && era < 100000000000) 
 			{
-				calc.CXP(era, eraDropStat, numXPLvl, txtLowXP, txtHighXP, txtAveXP, rtbReturn);
+				calc.CXP(era, eraDropStat, numXPLvl, numAwALvl, txtLowXP, txtHighXP, txtAveXP, rtbReturn);
 			}
 			else
 			{
@@ -91,18 +91,23 @@ namespace tptcalc
 			txtEra.Focus();
 
 			//Managing some tooltips
+			ttAWA.AutoPopDelay = 7500;
 			ttCV.AutoPopDelay = 25000;
 			ttNamedConvert.AutoPopDelay = 20000;
 
 			//EraXPCalc
 			ttxpBL.SetToolTip(numXPLvl, "Range between 0 and 25. \nSet to 0 if you do not have the module equipped.");
+			ttAWA.SetToolTip(numAwALvl, "Range between 0 and 5. \nSet to 0 if you do not have the module equipped." +
+				"\nCalculation assumes Awareness is perpetually on.");
 			ttRDrop.SetToolTip(txtEraXPDropStat, "Unrecognised values will be set to 1.");
 
 
 
 
 			//Misc Tooltips
-			ttCV.SetToolTip(lblCV, "0.3MPA.1 \nChanged up the UI a bit and added ToolTips for some things!" +
+			ttCV.SetToolTip(lblCV, "0.3MPA.2 \nEraXPCalc: Added support for Awareness Module, can't believe I didn't add that last time." +
+				"\n\t→ Could not get the time factorization to work." +
+				"\n\n0.3MPA.1 \nChanged up the UI a bit and added ToolTips for some things!" +
 				"\n\nExtended Named Notation support up to Quintillions (e18)." +
 				"\n\n Added Combat Surveillance Military Perk support to eraXPCalc." +
 				"\n\n0.3MPA" +
