@@ -216,7 +216,7 @@
             this.numXPLvl.Size = new System.Drawing.Size(46, 20);
             this.numXPLvl.TabIndex = 1;
             this.numXPLvl.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
             0});
@@ -663,7 +663,7 @@
             this.lblCV.Name = "lblCV";
             this.lblCV.Size = new System.Drawing.Size(97, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.3MPA.1";
+            this.lblCV.Text = "Version: 0.3MPA.2";
             // 
             // panel1
             // 
@@ -695,7 +695,7 @@
             this.numAwALvl.Size = new System.Drawing.Size(46, 20);
             this.numAwALvl.TabIndex = 102;
             this.numAwALvl.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
             0});
