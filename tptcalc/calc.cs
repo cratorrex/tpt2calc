@@ -75,7 +75,7 @@ namespace tptcalc
 
 
 
-		public void CSP(long kills, double time, NumericUpDown regNo, TextBox cspd, CheckBox chkElement)
+		public void CSP(long kills, double time, NumericUpDown regNo, TextBox cspd, CheckBox chkElement, double difficulty)
 		{
 			int regions = int.Parse(regNo.Value.ToString());
 			int paths = Reg2Paths(regions);
@@ -86,7 +86,7 @@ namespace tptcalc
 				elements = Reg2Elements(regions);
             }
 
-			double cSpd = (kills*elements) / (time * paths);
+			double cSpd = (kills * elements) / (time * paths * difficulty);
 
 			cspd.Text = cSpd.ToString() + "  clears/sec";
 		}

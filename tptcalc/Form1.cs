@@ -20,6 +20,7 @@ namespace tptcalc
 
 		readonly calc calc = new calc();
 		readonly convert convert = new convert();
+		double diffVal = 1;
 
 		private void btnCalculateXP_Click(object sender, EventArgs e)
 		{
@@ -54,7 +55,7 @@ namespace tptcalc
 			}
 			else if (kills > 0) 
 			{
-				calc.CSP(kills, time, numReg, txtCSpd, chkCSPD1Element);
+				calc.CSP(kills, time, numReg, txtCSpd, chkCSPD1Element, diffVal);
 			}
 			else
 			{
@@ -75,6 +76,33 @@ namespace tptcalc
             }
 		}
 
+        private void cBDifficulty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			Label lb = lblDifficulty;
+            switch (cBDifficulty.SelectedIndex)
+            {
+                case 1:
+					lb.Text = "Med/Hard:";
+					diffVal = 1.5;
+					break;
+				case 2: 
+					lb.Text = "Insane:";
+					diffVal = 2;
+					break;
+				case 3: 
+					lb.Text = "Nightmare:";
+					diffVal = 2.25;
+					break;
+				case 4: 
+					lb.Text = "Impossible:";
+					diffVal = 2.5;
+					break;
+				default: 
+					lb.Text = "Easy:";
+					diffVal = 1;
+					break;
+			}
+        }
 
 
         private void btnDisableCalc_Click(object sender, EventArgs e)
@@ -105,23 +133,18 @@ namespace tptcalc
 
 
 			//Misc Tooltips
-			ttCV.SetToolTip(lblCV, "0.3MPA.2 \nEraXPCalc: Added support for Awareness Module, can't believe I didn't add that last time." +
+			ttCV.SetToolTip(lblCV, "0.4 \nCSpdCalc: Added Difficulty Selection for those wanting to do Infinity Pushing (Defaults to \"Easy\")" +
+				"\n\n0.3MPA.2 \nEraXPCalc: Added support for Awareness Module, can't believe I didn't add that last time." +
 				"\n\t→ Could not get the time factorization to work." +
 				"\n\n0.3MPA.1 \nChanged up the UI a bit and added ToolTips for some things!" +
 				"\n\nExtended Named Notation support up to Quintillions (e18)." +
-				"\n\n Added Combat Surveillance Military Perk support to eraXPCalc." +
-				"\n\n0.3MPA" +
-				"\nRemoved \"Real time\" to \"Game time\" conversion. \n\nAdded convert.cs" +
-				"\n\t→ This allows for Scientific Notation and Limited Named Notation(up to Trillions) conversions." +
-				"\n\t→ Also checks for numbers \n\t→ Most invalid inputs parsed will be treated as 0." +
-				"\n\nAdded method Reg2Elements" +
-				"\n\t→This estimates the total kills based on a single element instead of having to count them yourself." +
-				"\n\t\t→ based off region" +
-				"\n\nYet to add Combat Surveillance Military Perk support to eraXPCalc.");
+				"\n\n Added Combat Surveillance Military Perk support to eraXPCalc.");
 
-			ttNamedConvert.SetToolTip(lblConvert, "Accepted \"Input Conversions\" as of current version: \n\nScientific Notation (use of \"e\" and \"E\")"
-				+ "\n\n"+"K, k: Thousands (e3) \nM, m: Millions (e6) \nB, b: Billions (e9) \nT, t: Trillions (e12) \nQA, Qa, qA, qa: Quadrillions (e15) " 
+			ttNamedConvert.SetToolTip(lblConvert, "Accepted \"Input Conversions\": " +
+				"\n\nScientific Notation (use of \"e\" and \"E\")"
+				+ "\n\nK, k: Thousands (e3) \nM, m: Millions (e6) \nB, b: Billions (e9) \nT, t: Trillions (e12) \nQA, Qa, qA, qa: Quadrillions (e15) " 
 				+ "\nQI, Qi, qI, qi: Quintillions (e18) ");
         }
+
     }
 }

@@ -36,6 +36,8 @@
             this.txtHighXP = new System.Windows.Forms.TextBox();
             this.txtAveXP = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numAwALvl = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
             this.txtEraXPDropStat = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEra = new System.Windows.Forms.TextBox();
@@ -85,10 +87,12 @@
             this.ttCV = new System.Windows.Forms.ToolTip(this.components);
             this.lblCV = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.numAwALvl = new System.Windows.Forms.NumericUpDown();
             this.ttAWA = new System.Windows.Forms.ToolTip(this.components);
+            this.label20 = new System.Windows.Forms.Label();
+            this.cBDifficulty = new System.Windows.Forms.ComboBox();
+            this.lblDifficulty = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numS)).BeginInit();
@@ -102,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -181,6 +184,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "EnemyXPCalculator";
             // 
+            // numAwALvl
+            // 
+            this.numAwALvl.Location = new System.Drawing.Point(203, 95);
+            this.numAwALvl.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numAwALvl.Name = "numAwALvl";
+            this.numAwALvl.Size = new System.Drawing.Size(46, 20);
+            this.numAwALvl.TabIndex = 102;
+            this.numAwALvl.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(67, 97);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(129, 13);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Awareness Module Level:";
+            // 
             // txtEraXPDropStat
             // 
             this.txtEraXPDropStat.Location = new System.Drawing.Point(194, 124);
@@ -250,13 +279,16 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtCSpd);
+            this.groupBox2.Controls.Add(this.lblDifficulty);
+            this.groupBox2.Controls.Add(this.cBDifficulty);
+            this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.chkCSPD1Element);
             this.groupBox2.Controls.Add(this.numS);
             this.groupBox2.Controls.Add(this.numM);
             this.groupBox2.Controls.Add(this.numH);
             this.groupBox2.Controls.Add(this.btnCSpd);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtCSpd);
             this.groupBox2.Controls.Add(this.numReg);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
@@ -284,7 +316,7 @@
             // 
             // numS
             // 
-            this.numS.Location = new System.Drawing.Point(220, 141);
+            this.numS.Location = new System.Drawing.Point(220, 154);
             this.numS.Maximum = new decimal(new int[] {
             60,
             0,
@@ -296,7 +328,7 @@
             // 
             // numM
             // 
-            this.numM.Location = new System.Drawing.Point(148, 141);
+            this.numM.Location = new System.Drawing.Point(148, 154);
             this.numM.Maximum = new decimal(new int[] {
             60,
             0,
@@ -308,7 +340,7 @@
             // 
             // numH
             // 
-            this.numH.Location = new System.Drawing.Point(74, 141);
+            this.numH.Location = new System.Drawing.Point(74, 154);
             this.numH.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -331,15 +363,15 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(33, 238);
+            this.label12.Location = new System.Drawing.Point(25, 238);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 13);
+            this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 16;
-            this.label12.Text = "ClearSpeed on Easy:";
+            this.label12.Text = "ClearSpeed on";
             // 
             // txtCSpd
             // 
-            this.txtCSpd.Location = new System.Drawing.Point(146, 235);
+            this.txtCSpd.Location = new System.Drawing.Point(156, 235);
             this.txtCSpd.Name = "txtCSpd";
             this.txtCSpd.ReadOnly = true;
             this.txtCSpd.Size = new System.Drawing.Size(162, 20);
@@ -379,7 +411,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(204, 143);
+            this.label10.Location = new System.Drawing.Point(204, 156);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(10, 13);
             this.label10.TabIndex = 12;
@@ -388,7 +420,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(132, 143);
+            this.label9.Location = new System.Drawing.Point(132, 156);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(10, 13);
             this.label9.TabIndex = 11;
@@ -398,7 +430,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 114);
+            this.label8.Location = new System.Drawing.Point(56, 133);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(238, 13);
             this.label8.TabIndex = 7;
@@ -661,9 +693,9 @@
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
-            this.lblCV.Size = new System.Drawing.Size(97, 15);
+            this.lblCV.Size = new System.Drawing.Size(65, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.3MPA.2";
+            this.lblCV.Text = "Version: 0.4";
             // 
             // panel1
             // 
@@ -674,31 +706,39 @@
             this.panel1.Size = new System.Drawing.Size(673, 30);
             this.panel1.TabIndex = 102;
             // 
-            // label19
+            // label20
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(67, 97);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(129, 13);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Awareness Module Level:";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(99, 108);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(50, 13);
+            this.label20.TabIndex = 101;
+            this.label20.Text = "Difficulty:";
             // 
-            // numAwALvl
+            // cBDifficulty
             // 
-            this.numAwALvl.Location = new System.Drawing.Point(203, 95);
-            this.numAwALvl.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numAwALvl.Name = "numAwALvl";
-            this.numAwALvl.Size = new System.Drawing.Size(46, 20);
-            this.numAwALvl.TabIndex = 102;
-            this.numAwALvl.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.cBDifficulty.FormattingEnabled = true;
+            this.cBDifficulty.Items.AddRange(new object[] {
+            "Easy",
+            "Medium/Hard",
+            "Insane",
+            "Nightmare",
+            "Impossible"});
+            this.cBDifficulty.Location = new System.Drawing.Point(152, 105);
+            this.cBDifficulty.Name = "cBDifficulty";
+            this.cBDifficulty.Size = new System.Drawing.Size(94, 21);
+            this.cBDifficulty.TabIndex = 102;
+            this.cBDifficulty.Text = "Easy";
+            this.cBDifficulty.SelectedIndexChanged += new System.EventHandler(this.cBDifficulty_SelectedIndexChanged);
+            // 
+            // lblDifficulty
+            // 
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Location = new System.Drawing.Point(99, 238);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(33, 13);
+            this.lblDifficulty.TabIndex = 103;
+            this.lblDifficulty.Text = "Easy:";
             // 
             // Form1
             // 
@@ -714,6 +754,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -730,7 +771,6 @@
             this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,6 +837,9 @@
         private System.Windows.Forms.NumericUpDown numAwALvl;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ToolTip ttAWA;
+        private System.Windows.Forms.ComboBox cBDifficulty;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblDifficulty;
     }
 }
 
