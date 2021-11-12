@@ -1,6 +1,6 @@
 # tpt2eracalc
 Check the Releases section to download the calculator.
-##### `Update 0.3MPA` allows support for "short named" and "scientific" notations! (on top of full notation) `NEW!!`
+##### Allows support for "short named" and "scientific" notations! (on top of full notation)
 ###### Unsure of how to make it into a web application so if anyone wants to, feel free!
 
 
@@ -27,6 +27,7 @@ Check the Releases section to download the calculator.
     - <s>if you're using real time, please click the checkbox before pressing Calculate.</s>
       - (removed in `0.3MPA`. sorry for any inconveniences caused. ping me on discord if you want me to add it back)
   - Which region you're in.
+  - Which Difficulty you're in `Added in 0.4`
   
    Note: The result of the calculation will be more accurate with more kills and time spent in the run.
       The clearspeed should be the same throughout all your rounds regardless of region.
