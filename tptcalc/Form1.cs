@@ -20,18 +20,21 @@ namespace tptcalc
 
 		readonly calc calc = new calc();
 		readonly convert convert = new convert();
-		double diffVal = 1;
+		bool im = false;
+
+		//Start EraXPCalc
 
 		private void btnCalculateXP_Click(object sender, EventArgs e)
 		{
 			//validates txtera is between 0 and 100B
-			long era = convert.CheckConvert(txtEra, rtbReturn, true); //Checks if the number requires conversion and converts where needed
-			long eraDropStat = convert.CheckConvert(txtEraXPDropStat, rtbReturn, false);
+			double era = convert.CheckConvert(txtEra, rtbReturn, true); //Checks if the number requires conversion and converts where needed
+			double eraDropStat = convert.CheckConvert(txtEraXPDropStat, rtbReturn, false);
 
 			if (eraDropStat < 1) { eraDropStat = 1; } //sets drop stat to 1 (default) if the user doesn't know the value
 
 			if (era >= 0 && era < 100000000000) 
 			{
+				era = Math.Round(era);//rounding
 				calc.CXP(era, eraDropStat, numXPLvl, numAwALvl, txtLowXP, txtHighXP, txtAveXP, rtbReturn);
 			}
 			else
@@ -40,6 +43,9 @@ namespace tptcalc
 				txtEra.Focus();
 			}
 		}
+
+		//End EraXPCalc
+		//Start CSpdCalc
 
 		private void btnCSpd_Click(object sender, EventArgs e)
 		{
@@ -55,7 +61,8 @@ namespace tptcalc
 			}
 			else if (kills > 0) 
 			{
-				calc.CSP(kills, time, numReg, txtCSpd, chkCSPD1Element, diffVal);
+				int spd = SpeedMod();
+				calc.CSP(kills, time, numReg, txtCSpd, chkCSPD1Element, cBDifficulty, im, txtKpS, chkWC, spd, chkMAcc.Checked);
 			}
 			else
 			{
@@ -64,6 +71,27 @@ namespace tptcalc
 			}
 
 		}
+		private void btnCalKill_Click(object sender, EventArgs e)
+		{
+			Calculate_Kills calculate_Kills = new Calculate_Kills(this);
+			calculate_Kills.Show();
+		}
+
+		public string CSPDKILLS
+		{
+			get { return txtKills.Text; }
+			set { txtKills.Text = value; }
+        }
+        private int SpeedMod()
+        {
+			if (cbRTorGT.SelectedIndex == 1 && chkIfx3.Checked)
+				return 3;
+			else if (cbRTorGT.SelectedIndex == 1)
+				return 2;
+			else
+				return 1;
+        }
+
         private void chkCSPD1Element_CheckedChanged(object sender, EventArgs e) //checking for stuff. label changes.
         {
 			if (chkCSPD1Element.Checked == true)
@@ -79,40 +107,48 @@ namespace tptcalc
         private void cBDifficulty_SelectedIndexChanged(object sender, EventArgs e)
         {
 			Label lb = lblDifficulty;
-            switch (cBDifficulty.SelectedIndex)
-            {
-                case 1:
-					lb.Text = "Med/Hard:";
-					diffVal = 1.5;
-					break;
-				case 2: 
-					lb.Text = "Insane:";
-					diffVal = 2;
-					break;
-				case 3: 
-					lb.Text = "Nightmare:";
-					diffVal = 2.25;
-					break;
-				case 4: 
-					lb.Text = "Impossible:";
-					diffVal = 2.5;
-					break;
-				default: 
-					lb.Text = "Easy:";
-					diffVal = 1;
-					break;
+
+			{
+				switch (cBDifficulty.SelectedIndex)
+				{
+					case 1:
+						lb.Text = "Med/Hard:";
+						im = false;
+						break;
+					case 2:
+						lb.Text = "Insane:";
+						im = false;
+						break;
+					case 3:
+						lb.Text = "Nightmare:";
+						im = false;
+						break;
+					case 4:
+						lb.Text = "Impossible:";
+						im = true;
+						break;
+					default:
+						lb.Text = "Easy:";
+						im = false;
+						break;
+				}
 			}
         }
 
+		//End CSpdCalc
+		//Start DisableCalc
 
         private void btnDisableCalc_Click(object sender, EventArgs e)
 		{
 			//nothing to validate here, just numbers
-			int baseC = int.Parse(numBaseDC.Value.ToString()),
-				nthD = int.Parse(numDisableN.Value.ToString());
+			double baseC = double.Parse(numBaseDC.Value.ToString()),
+				nthD = double.Parse(numDisableN.Value.ToString());
 
 			calc.EDC(baseC, nthD, txtIterEDC2, txtIterEDC3, txtIterEDC4, txtIterEDC5, txtIterEDCn);
 		}
+
+		//End DisableCalc
+		//Start Form Loading and other stuff
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -120,20 +156,33 @@ namespace tptcalc
 
 			//Managing some tooltips
 			ttAWA.AutoPopDelay = 7500;
-			ttCV.AutoPopDelay = 25000;
+			ttCV.AutoPopDelay = 45000;
 			ttNamedConvert.AutoPopDelay = 20000;
 
 			//EraXPCalc
 			ttxpBL.SetToolTip(numXPLvl, "Range between 0 and 25. \nSet to 0 if you do not have the module equipped.");
 			ttAWA.SetToolTip(numAwALvl, "Range between 0 and 5. \nSet to 0 if you do not have the module equipped." +
 				"\nCalculation assumes Awareness is perpetually on.");
-			ttRDrop.SetToolTip(txtEraXPDropStat, "Unrecognised values will be set to 1.");
+			ttRDrop.SetToolTip(txtEraXPDropStat, "Unrecognised values will be set to 1. \nCan only accept up to e18.");
+			ttMAccF.SetToolTip(chkMAcc, "The accurate formula accounts for the fact that less enemies spawn on boss waves. " +
+				"\nThis won't be accurate if you are using the wave floor trick to always spawn bosses.");
 
+			//CSpdCalc
+			cbRTorGT.SelectedIndex = 0;
 
-
+			//DisableCalc
 
 			//Misc Tooltips
-			ttCV.SetToolTip(lblCV, "0.4 \nCSpdCalc: Added Difficulty Selection for those wanting to do Infinity Pushing (Defaults to \"Easy\")" +
+			ttCV.SetToolTip(lblCV, "0.4X \nA lot of Bug Fixes and Calculation stuff with the help of BudEBoy. :D" +
+				"\nFixed a lot of bugs, thanks to bud for finding quite a lot of them." +
+				"\nCSpdCalc:" +
+				"\nAdded a bit more Named Notation Support (q for e15 and Q for e18)." +
+				"\nAdded Calculator to help accurately measure kills in the current run. (does not use convert.cs yet, gonna have another release for that one...)" +
+				"\nAdded back Real Time to Game Time conversions (default is Real Time), and x3 speed can be factored in (on by default)." +
+				"\nAdded Wave Compression toggle (on by default)." +
+				"\nAdded Kills/sec calculation." +
+				"\nAdded a more accurate formula, courtesy of bud." +
+				"\n\n0.4 \nCSpdCalc: Added Difficulty Selection for those wanting to do Infinity Pushing (Defaults to \"Easy\")" +
 				"\n\n0.3MPA.2 \nEraXPCalc: Added support for Awareness Module, can't believe I didn't add that last time." +
 				"\n\t→ Could not get the time factorization to work." +
 				"\n\n0.3MPA.1 \nChanged up the UI a bit and added ToolTips for some things!" +
@@ -142,8 +191,8 @@ namespace tptcalc
 
 			ttNamedConvert.SetToolTip(lblConvert, "Accepted \"Input Conversions\": " +
 				"\n\nScientific Notation (use of \"e\" and \"E\")"
-				+ "\n\nK, k: Thousands (e3) \nM, m: Millions (e6) \nB, b: Billions (e9) \nT, t: Trillions (e12) \nQA, Qa, qA, qa: Quadrillions (e15) " 
-				+ "\nQI, Qi, qI, qi: Quintillions (e18) ");
+				+ "\n\nK, k: Thousands (e3) \nM, m: Millions (e6) \nB, b: Billions (e9) \nT, t: Trillions (e12) \nq, QA, Qa, qA, qa: Quadrillions (e15) " 
+				+ "\nQ, QI, Qi, qI, qi: Quintillions (e18) ");
         }
 
     }

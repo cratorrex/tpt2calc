@@ -9,7 +9,7 @@ namespace tptcalc
 {
 	public class calc
 	{
-		public void CXP(long era, long dropstat, NumericUpDown xpmod, NumericUpDown awamod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug)
+		public void CXP(double era, double dropstat, NumericUpDown xpmod, NumericUpDown awamod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug)
 		{
 			double xpB = 1 + Mod2Bonus_XPB(int.Parse(xpmod.Value.ToString()));
 			double awaB = 1 + Mod2Bonus_AWA(int.Parse(awamod.Value.ToString()));
@@ -75,20 +75,29 @@ namespace tptcalc
 
 
 
-		public void CSP(long kills, double time, NumericUpDown regNo, TextBox cspd, CheckBox chkElement, double difficulty)
+		public void CSP(long kills, double time, NumericUpDown regNo, TextBox cspd, CheckBox chkElement, ComboBox cbDifficulty, bool impossible, 
+						TextBox kps, CheckBox WC, int spdMod, bool MoreAcc)
 		{
 			int regions = int.Parse(regNo.Value.ToString());
 			int paths = Reg2Paths(regions);
 			int elements = 1; //initialised if the checkbox wasn't checked
+			double difficulty = cb2Difficulty(cbDifficulty, WC);
+			double enemies_wave = EnemiesPerWave(difficulty, paths, MoreAcc);
 
-            if (chkElement.Checked)
+			if (chkElement.Checked && impossible)
+			{
+				elements = 10;
+			}
+			else if (chkElement.Checked && impossible != true)
             {
 				elements = Reg2Elements(regions);
             }
 
-			double cSpd = (kills * elements) / (time * paths * difficulty);
+			double cSpd = (kills * elements * spdMod) / (time * enemies_wave);
+			double KpS = (kills * elements * spdMod) / time;
 
 			cspd.Text = cSpd.ToString() + "  clears/sec";
+			kps.Text = KpS.ToString() + "  kills/sec";
 		}
 
 		private int Reg2Paths(int regNo)
@@ -134,8 +143,55 @@ namespace tptcalc
             }
         }
 
+		private double cb2Difficulty(ComboBox c2d, CheckBox wc)
+        {
+			if (wc.Checked)
+			{
+				switch (c2d.SelectedIndex)
+				{
+					case 1:
+						return 3;
+					case 2:
+						return 4;
+					case 3:
+						return 5;
+					case 4:
+						return 5;
+					default:
+						return 2;
+				}
+			}
+            else
+            {
+				switch (c2d.SelectedIndex)
+				{
+					case 1:
+						return 6;
+					case 2:
+						return 8;
+					case 3:
+						return 9;
+					case 4:
+						return 10;
+					default:
+						return 4;
+				}
 
-		public void EDC(int Cost, int n, TextBox D2, TextBox D3, TextBox D4, TextBox D5, TextBox DN)
+			}
+		}
+
+		private double EnemiesPerWave(double diff, double paths, bool mAcc)
+        {
+			double epw;
+			if (mAcc)
+			{ epw = (diff * paths * 0.9) + (((diff - 1) * paths + 1) * 0.1); }
+			else
+			{ epw = (diff * paths); }
+			return epw;
+		}
+
+
+		public void EDC(double Cost, double n, TextBox D2, TextBox D3, TextBox D4, TextBox D5, TextBox DN)
 		{
 			D2.Text = Cost2Disable(Cost, 2).ToString();
 			D3.Text = Cost2Disable(Cost, 3).ToString();
@@ -144,8 +200,10 @@ namespace tptcalc
 			DN.Text = Cost2Disable(Cost, n).ToString();
 		}
 
-		private double Cost2Disable (int cost, int nth)
+		private double Cost2Disable (double cost, double nth)
 		{
+			cost = Math.Round(cost / 10) * 10;
+			nth = Math.Round(nth / 10) * 10;
 			double value = cost*(Math.Pow((cost +(1000-cost)/10),nth-1));//X * ( X + ( ( 1000 - X ) / 10 ) ^ ( n - 1 ) ) 
 			return value;
 		}

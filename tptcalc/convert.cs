@@ -29,8 +29,8 @@ namespace tptcalc
             //checks for short named (counts up to Trillions, may update with more)
             else if (input.EndsWith("K") || input.EndsWith("k") || input.EndsWith("M") || input.EndsWith("m")
                 || input.EndsWith("B") || input.EndsWith("b") || input.EndsWith("T") || input.EndsWith("t")
-                || input.EndsWith("QA") || input.EndsWith("Qa") || input.EndsWith("qA") || input.EndsWith("qa")
-                || input.EndsWith("QI") || input.EndsWith("Qi") || input.EndsWith("qI") || input.EndsWith("qi"))
+                || input.EndsWith("QA") || input.EndsWith("Qa") || input.EndsWith("qA") || input.EndsWith("qa")  || input.EndsWith("q")
+                || input.EndsWith("QI") || input.EndsWith("Qi") || input.EndsWith("qI") || input.EndsWith("qi")  || input.EndsWith("Q"))
             {
                 output = SNamed(input);
                 //rAppend.AppendText("convert.cs: Input converted to " + output + Environment.NewLine);
@@ -84,10 +84,10 @@ namespace tptcalc
                 if (input.EndsWith("t") || input.EndsWith("T"))
                     output = Math.Round((Convert.ToDecimal(input.TrimEnd('t', 'T')) * 1000000000000), 0);
 
-                if (input.EndsWith("qa") || input.EndsWith("Qa") || input.EndsWith("qA") || input.EndsWith("QA"))
+                if (input.EndsWith("qa") || input.EndsWith("Qa") || input.EndsWith("qA") || input.EndsWith("QA") || input.EndsWith("q"))
                     output = Math.Round((Convert.ToDecimal(input.TrimEnd('q', 'a', 'Q', 'A')) * 1000000000000000), 0);
 
-                if (input.EndsWith("QI") || input.EndsWith("Qi") || input.EndsWith("qI") || input.EndsWith("qi"))
+                if (input.EndsWith("QI") || input.EndsWith("Qi") || input.EndsWith("qI") || input.EndsWith("qi") || input.EndsWith("Q"))
                     output = Math.Round((Convert.ToDecimal(input.TrimEnd('q', 'i', 'Q', 'I')) * 1000000000000000000), 0);
 
             }

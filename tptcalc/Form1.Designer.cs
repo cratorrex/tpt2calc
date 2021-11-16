@@ -46,13 +46,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbRTorGT = new System.Windows.Forms.ComboBox();
+            this.btnCalKill = new System.Windows.Forms.Button();
+            this.cBDifficulty = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.chkCSPD1Element = new System.Windows.Forms.CheckBox();
             this.numS = new System.Windows.Forms.NumericUpDown();
             this.numM = new System.Windows.Forms.NumericUpDown();
             this.numH = new System.Windows.Forms.NumericUpDown();
             this.btnCSpd = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCSpd = new System.Windows.Forms.TextBox();
             this.numReg = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,6 +62,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtKills = new System.Windows.Forms.TextBox();
             this.lblEnemiesKilledCSPD = new System.Windows.Forms.Label();
+            this.txtCSpd = new System.Windows.Forms.TextBox();
+            this.lblDifficulty = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.rtbReturn = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -80,6 +85,11 @@
             this.numBaseDC = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkIfx3 = new System.Windows.Forms.CheckBox();
+            this.chkWC = new System.Windows.Forms.CheckBox();
+            this.txtKpS = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.ttRDrop = new System.Windows.Forms.ToolTip(this.components);
             this.ttNamedConvert = new System.Windows.Forms.ToolTip(this.components);
             this.lblConvert = new System.Windows.Forms.Label();
@@ -88,9 +98,8 @@
             this.lblCV = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ttAWA = new System.Windows.Forms.ToolTip(this.components);
-            this.label20 = new System.Windows.Forms.Label();
-            this.cBDifficulty = new System.Windows.Forms.ComboBox();
-            this.lblDifficulty = new System.Windows.Forms.Label();
+            this.chkMAcc = new System.Windows.Forms.CheckBox();
+            this.ttMAccF = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
@@ -105,6 +114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -279,8 +289,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtCSpd);
-            this.groupBox2.Controls.Add(this.lblDifficulty);
+            this.groupBox2.Controls.Add(this.cbRTorGT);
+            this.groupBox2.Controls.Add(this.btnCalKill);
             this.groupBox2.Controls.Add(this.cBDifficulty);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.chkCSPD1Element);
@@ -288,7 +298,6 @@
             this.groupBox2.Controls.Add(this.numM);
             this.groupBox2.Controls.Add(this.numH);
             this.groupBox2.Controls.Add(this.btnCSpd);
-            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.numReg);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
@@ -302,6 +311,52 @@
             this.groupBox2.TabIndex = 200;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ClearSpeedCalculator (CSpeedCalc)";
+            // 
+            // cbRTorGT
+            // 
+            this.cbRTorGT.FormattingEnabled = true;
+            this.cbRTorGT.Items.AddRange(new object[] {
+            "Real Time",
+            "Game Time"});
+            this.cbRTorGT.Location = new System.Drawing.Point(46, 130);
+            this.cbRTorGT.Name = "cbRTorGT";
+            this.cbRTorGT.Size = new System.Drawing.Size(77, 21);
+            this.cbRTorGT.TabIndex = 202;
+            // 
+            // btnCalKill
+            // 
+            this.btnCalKill.Location = new System.Drawing.Point(193, 56);
+            this.btnCalKill.Name = "btnCalKill";
+            this.btnCalKill.Size = new System.Drawing.Size(113, 23);
+            this.btnCalKill.TabIndex = 201;
+            this.btnCalKill.Text = "Calculate Kills";
+            this.btnCalKill.UseVisualStyleBackColor = true;
+            this.btnCalKill.Click += new System.EventHandler(this.btnCalKill_Click);
+            // 
+            // cBDifficulty
+            // 
+            this.cBDifficulty.FormattingEnabled = true;
+            this.cBDifficulty.Items.AddRange(new object[] {
+            "Easy",
+            "Medium/Hard",
+            "Insane",
+            "Nightmare",
+            "Impossible"});
+            this.cBDifficulty.Location = new System.Drawing.Point(152, 105);
+            this.cBDifficulty.Name = "cBDifficulty";
+            this.cBDifficulty.Size = new System.Drawing.Size(94, 21);
+            this.cBDifficulty.TabIndex = 102;
+            this.cBDifficulty.Text = "Easy";
+            this.cBDifficulty.SelectedIndexChanged += new System.EventHandler(this.cBDifficulty_SelectedIndexChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(99, 108);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(50, 13);
+            this.label20.TabIndex = 101;
+            this.label20.Text = "Difficulty:";
             // 
             // chkCSPD1Element
             // 
@@ -360,23 +415,6 @@
             this.btnCSpd.UseVisualStyleBackColor = true;
             this.btnCSpd.Click += new System.EventHandler(this.btnCSpd_Click);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(25, 238);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 13);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "ClearSpeed on";
-            // 
-            // txtCSpd
-            // 
-            this.txtCSpd.Location = new System.Drawing.Point(156, 235);
-            this.txtCSpd.Name = "txtCSpd";
-            this.txtCSpd.ReadOnly = true;
-            this.txtCSpd.Size = new System.Drawing.Size(162, 20);
-            this.txtCSpd.TabIndex = 99;
-            // 
             // numReg
             // 
             this.numReg.Location = new System.Drawing.Point(141, 194);
@@ -430,11 +468,11 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 133);
+            this.label8.Location = new System.Drawing.Point(121, 133);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(238, 13);
+            this.label8.Size = new System.Drawing.Size(184, 13);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Game Time in the current run in the format H:M:S";
+            this.label8.Text = " in the current run in the format H:M:S";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtKills
@@ -453,6 +491,32 @@
             this.lblEnemiesKilledCSPD.Size = new System.Drawing.Size(135, 39);
             this.lblEnemiesKilledCSPD.TabIndex = 0;
             this.lblEnemiesKilledCSPD.Text = "Total enemies killed\r\nGo to [Settings > Enemies] \r\nand add up all the numbers";
+            // 
+            // txtCSpd
+            // 
+            this.txtCSpd.Location = new System.Drawing.Point(136, 235);
+            this.txtCSpd.Name = "txtCSpd";
+            this.txtCSpd.ReadOnly = true;
+            this.txtCSpd.Size = new System.Drawing.Size(162, 20);
+            this.txtCSpd.TabIndex = 99;
+            // 
+            // lblDifficulty
+            // 
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Location = new System.Drawing.Point(79, 238);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(33, 13);
+            this.lblDifficulty.TabIndex = 103;
+            this.lblDifficulty.Text = "Easy:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 238);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "ClearSpeed on";
             // 
             // rtbReturn
             // 
@@ -667,14 +731,72 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(665, 293);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Optimization Utilities";
+            this.tabPage2.Text = "ClearSpeedCalculator";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.chkMAcc);
+            this.groupBox4.Controls.Add(this.chkIfx3);
+            this.groupBox4.Controls.Add(this.chkWC);
+            this.groupBox4.Controls.Add(this.txtKpS);
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.txtCSpd);
+            this.groupBox4.Controls.Add(this.lblDifficulty);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Location = new System.Drawing.Point(355, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(304, 261);
+            this.groupBox4.TabIndex = 104;
+            this.groupBox4.TabStop = false;
+            // 
+            // chkIfx3
+            // 
+            this.chkIfx3.AutoSize = true;
+            this.chkIfx3.Checked = true;
+            this.chkIfx3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkIfx3.Location = new System.Drawing.Point(3, 49);
+            this.chkIfx3.Name = "chkIfx3";
+            this.chkIfx3.Size = new System.Drawing.Size(278, 17);
+            this.chkIfx3.TabIndex = 107;
+            this.chkIfx3.Text = "Check if you are using X3 speed (if using Game Time)";
+            this.chkIfx3.UseVisualStyleBackColor = true;
+            // 
+            // chkWC
+            // 
+            this.chkWC.AutoSize = true;
+            this.chkWC.Checked = true;
+            this.chkWC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkWC.Location = new System.Drawing.Point(3, 16);
+            this.chkWC.Name = "chkWC";
+            this.chkWC.Size = new System.Drawing.Size(231, 30);
+            this.chkWC.TabIndex = 106;
+            this.chkWC.Text = "Check if Wave Compression is on \r\n(mainly when using More Accurate Formula)";
+            this.chkWC.UseVisualStyleBackColor = true;
+            // 
+            // txtKpS
+            // 
+            this.txtKpS.Location = new System.Drawing.Point(141, 208);
+            this.txtKpS.Name = "txtKpS";
+            this.txtKpS.ReadOnly = true;
+            this.txtKpS.Size = new System.Drawing.Size(157, 20);
+            this.txtKpS.TabIndex = 105;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(5, 211);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(137, 13);
+            this.label21.TabIndex = 104;
+            this.label21.Text = "Kills per Real Time Second:";
             // 
             // lblConvert
             // 
@@ -693,9 +815,9 @@
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
-            this.lblCV.Size = new System.Drawing.Size(65, 15);
+            this.lblCV.Size = new System.Drawing.Size(72, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.4";
+            this.lblCV.Text = "Version: 0.4X";
             // 
             // panel1
             // 
@@ -706,39 +828,15 @@
             this.panel1.Size = new System.Drawing.Size(673, 30);
             this.panel1.TabIndex = 102;
             // 
-            // label20
+            // chkMAcc
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(99, 108);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(50, 13);
-            this.label20.TabIndex = 101;
-            this.label20.Text = "Difficulty:";
-            // 
-            // cBDifficulty
-            // 
-            this.cBDifficulty.FormattingEnabled = true;
-            this.cBDifficulty.Items.AddRange(new object[] {
-            "Easy",
-            "Medium/Hard",
-            "Insane",
-            "Nightmare",
-            "Impossible"});
-            this.cBDifficulty.Location = new System.Drawing.Point(152, 105);
-            this.cBDifficulty.Name = "cBDifficulty";
-            this.cBDifficulty.Size = new System.Drawing.Size(94, 21);
-            this.cBDifficulty.TabIndex = 102;
-            this.cBDifficulty.Text = "Easy";
-            this.cBDifficulty.SelectedIndexChanged += new System.EventHandler(this.cBDifficulty_SelectedIndexChanged);
-            // 
-            // lblDifficulty
-            // 
-            this.lblDifficulty.AutoSize = true;
-            this.lblDifficulty.Location = new System.Drawing.Point(99, 238);
-            this.lblDifficulty.Name = "lblDifficulty";
-            this.lblDifficulty.Size = new System.Drawing.Size(33, 13);
-            this.lblDifficulty.TabIndex = 103;
-            this.lblDifficulty.Text = "Easy:";
+            this.chkMAcc.AutoSize = true;
+            this.chkMAcc.Location = new System.Drawing.Point(3, 72);
+            this.chkMAcc.Name = "chkMAcc";
+            this.chkMAcc.Size = new System.Drawing.Size(206, 30);
+            this.chkMAcc.TabIndex = 203;
+            this.chkMAcc.Text = "Check to use a more accurate formula\r\n(Hover for details)";
+            this.chkMAcc.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -750,7 +848,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rtbReturn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "tpt2 Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -769,6 +867,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -840,6 +940,15 @@
         private System.Windows.Forms.ComboBox cBDifficulty;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lblDifficulty;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txtKpS;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btnCalKill;
+        private System.Windows.Forms.ComboBox cbRTorGT;
+        private System.Windows.Forms.CheckBox chkIfx3;
+        private System.Windows.Forms.CheckBox chkWC;
+        private System.Windows.Forms.CheckBox chkMAcc;
+        private System.Windows.Forms.ToolTip ttMAccF;
     }
 }
 
