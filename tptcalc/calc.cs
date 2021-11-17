@@ -9,23 +9,35 @@ namespace tptcalc
 {
 	public class calc
 	{
-		public void CXP(double era, double dropstat, NumericUpDown xpmod, NumericUpDown awamod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug)
+		public void CXP(double era, double dropstat, NumericUpDown xpmod, NumericUpDown awamod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug,
+						CheckBox checkbox2log)
 		{
 			double xpB = 1 + Mod2Bonus_XPB(int.Parse(xpmod.Value.ToString()));
 			double awaB = 1 + Mod2Bonus_AWA(int.Parse(awamod.Value.ToString()));
+			double dropStat = 1;
+
+			if (checkbox2log.Checked)
+			{ 
+				dropStat = Math.Pow(10, (dropstat * 0.05));
+			}
+			else if (checkbox2log.Checked != true) 
+			{ 
+				dropStat = Math.Pow(dropstat, 0.05);
+			}
+
 			//debug.AppendText(Math.Pow(dropstat, 0.05).ToString() + Environment.NewLine); //(checked as correct)
 
 			// (0.5 + rand(0,1) + era^0.2) * xpB
 			//Random random = new Random(); //if you wanna use the random function
 			//double rand = random.Next(0, 100)/100; //for simplicity and rounding sake
-			
+
 			LowX.Text = CXPF(0.5).ToString();
 			HighX.Text = CXPF(1.5).ToString();
 			AveX.Text = CXPF(1).ToString();
 
 			double CXPF(double ave)
 			{
-				double E = ((ave + Math.Pow(era, 0.2)) * xpB * awaB * Math.Pow(dropstat, 0.05));
+				double E = ((ave + Math.Pow(era, 0.2)) * xpB * awaB * dropStat);
 				return E;
 			}
 

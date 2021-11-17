@@ -86,6 +86,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkMAcc = new System.Windows.Forms.CheckBox();
             this.chkIfx3 = new System.Windows.Forms.CheckBox();
             this.chkWC = new System.Windows.Forms.CheckBox();
             this.txtKpS = new System.Windows.Forms.TextBox();
@@ -98,8 +99,8 @@
             this.lblCV = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ttAWA = new System.Windows.Forms.ToolTip(this.components);
-            this.chkMAcc = new System.Windows.Forms.CheckBox();
             this.ttMAccF = new System.Windows.Forms.ToolTip(this.components);
+            this.chkResDrop = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
@@ -138,7 +139,7 @@
             // 
             // btnCalculateXP
             // 
-            this.btnCalculateXP.Location = new System.Drawing.Point(125, 164);
+            this.btnCalculateXP.Location = new System.Drawing.Point(125, 172);
             this.btnCalculateXP.Name = "btnCalculateXP";
             this.btnCalculateXP.Size = new System.Drawing.Size(75, 23);
             this.btnCalculateXP.TabIndex = 2;
@@ -172,6 +173,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkResDrop);
             this.groupBox1.Controls.Add(this.numAwALvl);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.txtEraXPDropStat);
@@ -325,9 +327,9 @@
             // 
             // btnCalKill
             // 
-            this.btnCalKill.Location = new System.Drawing.Point(193, 56);
+            this.btnCalKill.Location = new System.Drawing.Point(210, 56);
             this.btnCalKill.Name = "btnCalKill";
-            this.btnCalKill.Size = new System.Drawing.Size(113, 23);
+            this.btnCalKill.Size = new System.Drawing.Size(96, 23);
             this.btnCalKill.TabIndex = 201;
             this.btnCalKill.Text = "Calculate Kills";
             this.btnCalKill.UseVisualStyleBackColor = true;
@@ -757,6 +759,16 @@
             this.groupBox4.TabIndex = 104;
             this.groupBox4.TabStop = false;
             // 
+            // chkMAcc
+            // 
+            this.chkMAcc.AutoSize = true;
+            this.chkMAcc.Location = new System.Drawing.Point(3, 72);
+            this.chkMAcc.Name = "chkMAcc";
+            this.chkMAcc.Size = new System.Drawing.Size(206, 30);
+            this.chkMAcc.TabIndex = 203;
+            this.chkMAcc.Text = "Check to use a more accurate formula\r\n(Hover for details)";
+            this.chkMAcc.UseVisualStyleBackColor = true;
+            // 
             // chkIfx3
             // 
             this.chkIfx3.AutoSize = true;
@@ -815,9 +827,9 @@
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
-            this.lblCV.Size = new System.Drawing.Size(72, 15);
+            this.lblCV.Size = new System.Drawing.Size(79, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.4X";
+            this.lblCV.Text = "Version: 0.4XX";
             // 
             // panel1
             // 
@@ -828,15 +840,19 @@
             this.panel1.Size = new System.Drawing.Size(673, 30);
             this.panel1.TabIndex = 102;
             // 
-            // chkMAcc
+            // chkResDrop
             // 
-            this.chkMAcc.AutoSize = true;
-            this.chkMAcc.Location = new System.Drawing.Point(3, 72);
-            this.chkMAcc.Name = "chkMAcc";
-            this.chkMAcc.Size = new System.Drawing.Size(206, 30);
-            this.chkMAcc.TabIndex = 203;
-            this.chkMAcc.Text = "Check to use a more accurate formula\r\n(Hover for details)";
-            this.chkMAcc.UseVisualStyleBackColor = true;
+            this.chkResDrop.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.chkResDrop.AutoSize = true;
+            this.chkResDrop.BackColor = System.Drawing.Color.Gainsboro;
+            this.chkResDrop.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkResDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.chkResDrop.Location = new System.Drawing.Point(91, 144);
+            this.chkResDrop.Name = "chkResDrop";
+            this.chkResDrop.Size = new System.Drawing.Size(204, 17);
+            this.chkResDrop.TabIndex = 103;
+            this.chkResDrop.Text = "Use log10 (for values over 9e18 / 9Qi)";
+            this.chkResDrop.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -949,6 +965,7 @@
         private System.Windows.Forms.CheckBox chkWC;
         private System.Windows.Forms.CheckBox chkMAcc;
         private System.Windows.Forms.ToolTip ttMAccF;
+        private System.Windows.Forms.CheckBox chkResDrop;
     }
 }
 

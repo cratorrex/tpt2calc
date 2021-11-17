@@ -30,12 +30,16 @@ namespace tptcalc
 			double era = convert.CheckConvert(txtEra, rtbReturn, true); //Checks if the number requires conversion and converts where needed
 			double eraDropStat = convert.CheckConvert(txtEraXPDropStat, rtbReturn, false);
 
-			if (eraDropStat < 1) { eraDropStat = 1; } //sets drop stat to 1 (default) if the user doesn't know the value
+			if (eraDropStat < 1 && chkResDrop.Checked == false) { eraDropStat = 1; } //sets drop stat to 1 (default) if the user doesn't know the value
 
-			if (era >= 0 && era < 100000000000) 
+			if (chkResDrop.Checked && (eraDropStat > 308)) 
+				{
+					rtbReturn.AppendText("eraXPCalc: Exponent is over infinity, can't compute. Please enter a value less than 308." + Environment.NewLine); //may be cascading
+				}
+			else if (era >= 0 && era < 100000000000) 
 			{
 				era = Math.Round(era);//rounding
-				calc.CXP(era, eraDropStat, numXPLvl, numAwALvl, txtLowXP, txtHighXP, txtAveXP, rtbReturn);
+				calc.CXP(era, eraDropStat, numXPLvl, numAwALvl, txtLowXP, txtHighXP, txtAveXP, rtbReturn, chkResDrop);
 			}
 			else
 			{
@@ -156,7 +160,7 @@ namespace tptcalc
 
 			//Managing some tooltips
 			ttAWA.AutoPopDelay = 7500;
-			ttCV.AutoPopDelay = 45000;
+			ttCV.AutoPopDelay = 30000;
 			ttNamedConvert.AutoPopDelay = 20000;
 
 			//EraXPCalc
@@ -173,21 +177,22 @@ namespace tptcalc
 			//DisableCalc
 
 			//Misc Tooltips
-			ttCV.SetToolTip(lblCV, "0.4X \nA lot of Bug Fixes and Calculation stuff with the help of BudEBoy. :D" +
+			ttCV.SetToolTip(lblCV, "0.4XX \nFound a few more bugs and fixed them." +
+				"\n\t→ Fixed Resource Dropstat always returning 0 (i forgot why i put the \"show\" variable there for... -_-)." +
+				"\n\t→ Fixed UI issue with ClearSpeed Calculator." +
+				"\nAdded Log10 calculations for Resource Drop Stat values over 9e18 / 9Qi." +
+				"\n\n0.4X \nA lot of Bug Fixes and Calculation stuff with the help of BudEBoy. :D" +
 				"\nFixed a lot of bugs, thanks to bud for finding quite a lot of them." +
-				"\nCSpdCalc:" +
 				"\nAdded a bit more Named Notation Support (q for e15 and Q for e18)." +
-				"\nAdded Calculator to help accurately measure kills in the current run. (does not use convert.cs yet, gonna have another release for that one...)" +
-				"\nAdded back Real Time to Game Time conversions (default is Real Time), and x3 speed can be factored in (on by default)." +
-				"\nAdded Wave Compression toggle (on by default)." +
-				"\nAdded Kills/sec calculation." +
-				"\nAdded a more accurate formula, courtesy of bud." +
+				"\nCSpdCalc:" +
+				"\n\t→ Added Calculator to help accurately measure kills in the current run. (does not use convert.cs yet, gonna have another release for that one...)" +
+				"\n\t→ Added back Real Time to Game Time conversions (default is Real Time), and x3 speed can be factored in (on by default)." +
+				"\n\t→ Added Wave Compression toggle (on by default)." +
+				"\n\t→ Added Kills/sec calculation." +
+				"\n\t→ Added a more accurate formula, courtesy of bud." +
 				"\n\n0.4 \nCSpdCalc: Added Difficulty Selection for those wanting to do Infinity Pushing (Defaults to \"Easy\")" +
 				"\n\n0.3MPA.2 \nEraXPCalc: Added support for Awareness Module, can't believe I didn't add that last time." +
-				"\n\t→ Could not get the time factorization to work." +
-				"\n\n0.3MPA.1 \nChanged up the UI a bit and added ToolTips for some things!" +
-				"\n\nExtended Named Notation support up to Quintillions (e18)." +
-				"\n\n Added Combat Surveillance Military Perk support to eraXPCalc.");
+				"\n\t→ Could not get the time factorization to work.");
 
 			ttNamedConvert.SetToolTip(lblConvert, "Accepted \"Input Conversions\": " +
 				"\n\nScientific Notation (use of \"e\" and \"E\")"

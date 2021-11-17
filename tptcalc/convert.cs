@@ -43,11 +43,19 @@ namespace tptcalc
                 return 0;
             }
 
-            else if (show == false) return 0;
+            //else if (show == false) return 0;
 
             else
             {
-                return long.Parse(input);
+                try
+                {
+                    return long.Parse(input);
+                }
+                catch
+                {
+                    error.AppendText("convert.cs: Input could not be recognised, treated as 0." + Environment.NewLine);
+                    return 0;
+                }
             }
         }
 
