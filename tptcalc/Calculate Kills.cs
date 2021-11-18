@@ -13,6 +13,8 @@ namespace tptcalc
     public partial class Calculate_Kills : Form
     {           
         private Form1 MainForm = null;
+        readonly convert convert = new convert();
+
 
         public Calculate_Kills(Form callingForm)
         {
@@ -28,13 +30,16 @@ namespace tptcalc
 
             for (int i = 0; i < 10; i++) 
             {
-                if (int.TryParse(textboxes[i].Text, out int j)) 
+                if (int.TryParse(convert.CheckConvert(textboxes[i], rtbF2_Return, false).ToString(), out int j)) 
                 {
                     kills += j;
                 }
             }
             this.MainForm.CSPDKILLS = kills.ToString();
-            this.Close();
+            this.MainForm.for_1E = false;
+
+            if (chkKeep.Checked == false)
+            { this.Close(); }
         }
     }
 }

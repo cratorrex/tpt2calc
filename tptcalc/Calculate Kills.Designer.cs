@@ -51,6 +51,8 @@ namespace tptcalc
             this.txtUni = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.rtbF2_Return = new System.Windows.Forms.RichTextBox();
+            this.chkKeep = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -215,7 +217,7 @@ namespace tptcalc
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(209, 186);
+            this.btnCalculate.Location = new System.Drawing.Point(210, 186);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(171, 23);
             this.btnCalculate.TabIndex = 20;
@@ -228,16 +230,35 @@ namespace tptcalc
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(9, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(342, 26);
+            this.label11.Size = new System.Drawing.Size(268, 26);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Enter kills for individual elements (in full notation) and click \"Calculate\". \r\nU" +
-    "nknown values will be treated as 0.";
+            this.label11.Text = "Enter kills for individual elements and click \"Calculate\". \r\nUnknown values will " +
+    "be treated as 0.";
+            // 
+            // rtbF2_Return
+            // 
+            this.rtbF2_Return.Location = new System.Drawing.Point(359, 186);
+            this.rtbF2_Return.Name = "rtbF2_Return";
+            this.rtbF2_Return.Size = new System.Drawing.Size(21, 23);
+            this.rtbF2_Return.TabIndex = 22;
+            this.rtbF2_Return.Text = "";
+            // 
+            // chkKeep
+            // 
+            this.chkKeep.AutoSize = true;
+            this.chkKeep.Location = new System.Drawing.Point(12, 192);
+            this.chkKeep.Name = "chkKeep";
+            this.chkKeep.Size = new System.Drawing.Size(191, 17);
+            this.chkKeep.TabIndex = 23;
+            this.chkKeep.Text = "Keep open after pressing Calculate";
+            this.chkKeep.UseVisualStyleBackColor = true;
             // 
             // Calculate_Kills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 221);
+            this.Controls.Add(this.chkKeep);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtUni);
@@ -260,6 +281,7 @@ namespace tptcalc
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.rtbF2_Return);
             this.Name = "Calculate_Kills";
             this.Text = "Calculate_Kills";
             this.ResumeLayout(false);
@@ -291,5 +313,7 @@ namespace tptcalc
         private System.Windows.Forms.TextBox txtUni;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RichTextBox rtbF2_Return;
+        private System.Windows.Forms.CheckBox chkKeep;
     }
 }

@@ -86,6 +86,12 @@ namespace tptcalc
 			get { return txtKills.Text; }
 			set { txtKills.Text = value; }
         }
+		public bool for_1E
+        {
+			get { return chkCSPD1Element.Checked; }
+			set { chkCSPD1Element.Checked = value; }
+        }
+
         private int SpeedMod()
         {
 			if (cbRTorGT.SelectedIndex == 1 && chkIfx3.Checked)
@@ -177,7 +183,11 @@ namespace tptcalc
 			//DisableCalc
 
 			//Misc Tooltips
-			ttCV.SetToolTip(lblCV, "0.4XX \nFound a few more bugs and fixed them." +
+			ttCV.SetToolTip(lblCV, "0.4XXX \nSmall Fixes, Small Additions." +
+				"\n	Added an extra safeguard when using Calculate_Kills in the case they forgot to uncheck \"Calculate for one Element\"." +
+				"\nCalculate_Kills now can convert notation numbers." +
+				"\nCalculate_Kills can now be kept open after calculation." +
+				"\n\n0.4XX \nFound a few more bugs and fixed them." +
 				"\n\t→ Fixed Resource Dropstat always returning 0 (i forgot why i put the \"show\" variable there for... -_-)." +
 				"\n\t→ Fixed UI issue with ClearSpeed Calculator." +
 				"\nAdded Log10 calculations for Resource Drop Stat values over 9e18 / 9Qi." +
@@ -189,10 +199,7 @@ namespace tptcalc
 				"\n\t→ Added back Real Time to Game Time conversions (default is Real Time), and x3 speed can be factored in (on by default)." +
 				"\n\t→ Added Wave Compression toggle (on by default)." +
 				"\n\t→ Added Kills/sec calculation." +
-				"\n\t→ Added a more accurate formula, courtesy of bud." +
-				"\n\n0.4 \nCSpdCalc: Added Difficulty Selection for those wanting to do Infinity Pushing (Defaults to \"Easy\")" +
-				"\n\n0.3MPA.2 \nEraXPCalc: Added support for Awareness Module, can't believe I didn't add that last time." +
-				"\n\t→ Could not get the time factorization to work.");
+				"\n\t→ Added a more accurate formula, courtesy of bud.");
 
 			ttNamedConvert.SetToolTip(lblConvert, "Accepted \"Input Conversions\": " +
 				"\n\nScientific Notation (use of \"e\" and \"E\")"

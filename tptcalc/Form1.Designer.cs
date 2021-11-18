@@ -36,6 +36,7 @@
             this.txtHighXP = new System.Windows.Forms.TextBox();
             this.txtAveXP = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkResDrop = new System.Windows.Forms.CheckBox();
             this.numAwALvl = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.txtEraXPDropStat = new System.Windows.Forms.TextBox();
@@ -100,7 +101,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ttAWA = new System.Windows.Forms.ToolTip(this.components);
             this.ttMAccF = new System.Windows.Forms.ToolTip(this.components);
-            this.chkResDrop = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
@@ -195,6 +195,20 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "EnemyXPCalculator";
+            // 
+            // chkResDrop
+            // 
+            this.chkResDrop.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.chkResDrop.AutoSize = true;
+            this.chkResDrop.BackColor = System.Drawing.Color.Gainsboro;
+            this.chkResDrop.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkResDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.chkResDrop.Location = new System.Drawing.Point(91, 144);
+            this.chkResDrop.Name = "chkResDrop";
+            this.chkResDrop.Size = new System.Drawing.Size(204, 17);
+            this.chkResDrop.TabIndex = 103;
+            this.chkResDrop.Text = "Use log10 (for values over 9e18 / 9Qi)";
+            this.chkResDrop.UseVisualStyleBackColor = false;
             // 
             // numAwALvl
             // 
@@ -827,9 +841,9 @@
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
-            this.lblCV.Size = new System.Drawing.Size(79, 15);
+            this.lblCV.Size = new System.Drawing.Size(86, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.4XX";
+            this.lblCV.Text = "Version: 0.4XXX";
             // 
             // panel1
             // 
@@ -839,20 +853,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(673, 30);
             this.panel1.TabIndex = 102;
-            // 
-            // chkResDrop
-            // 
-            this.chkResDrop.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.chkResDrop.AutoSize = true;
-            this.chkResDrop.BackColor = System.Drawing.Color.Gainsboro;
-            this.chkResDrop.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkResDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.chkResDrop.Location = new System.Drawing.Point(91, 144);
-            this.chkResDrop.Name = "chkResDrop";
-            this.chkResDrop.Size = new System.Drawing.Size(204, 17);
-            this.chkResDrop.TabIndex = 103;
-            this.chkResDrop.Text = "Use log10 (for values over 9e18 / 9Qi)";
-            this.chkResDrop.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
