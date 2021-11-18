@@ -184,9 +184,9 @@ namespace tptcalc
 
 			//Misc Tooltips
 			ttCV.SetToolTip(lblCV, "0.4XXX \nSmall Fixes, Small Additions." +
-				"\n	Added an extra safeguard when using Calculate_Kills in the case they forgot to uncheck \"Calculate for one Element\"." +
-				"\nCalculate_Kills now can convert notation numbers." +
-				"\nCalculate_Kills can now be kept open after calculation." +
+				"\nt→Added an extra safeguard when using Calculate_Kills in the case they forgot to uncheck \"Calculate for one Element\"." +
+				"\nt→Calculate_Kills now can convert notation numbers." +
+				"\nt→Calculate_Kills can now be kept open after calculation." +
 				"\n\n0.4XX \nFound a few more bugs and fixed them." +
 				"\n\t→ Fixed Resource Dropstat always returning 0 (i forgot why i put the \"show\" variable there for... -_-)." +
 				"\n\t→ Fixed UI issue with ClearSpeed Calculator." +
