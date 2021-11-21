@@ -3,7 +3,7 @@ Check the Releases section to download the calculator.
 ##### Allows support for "short named" and "scientific" notations! (on top of full notation)
 ###### Unsure of how to make it into a web application so if anyone wants to, feel free!
 
-## Latest Version `0.4X > 0.4XXX`
+## Latest Version `0.4X >`<a href="https://github.com/cratorrex/tpt2eracalc/releases/tag/0.4XXX">`0.4XXX`</a>
 ##### `0.4X` A very major Expansion update to the Clear Speed Calculator courtesy of BudEBoy!
   - Fixed errors when inputting `float` values to some textboxes where they accepted `long`.
   - Added a bit more support for ***Named Notation*** (added **q** for e15 and **Q** for e18)
