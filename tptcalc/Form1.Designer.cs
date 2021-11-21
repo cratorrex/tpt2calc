@@ -69,7 +69,7 @@
             this.rtbReturn = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnDisableCalc = new System.Windows.Forms.Button();
             this.numDisableN = new System.Windows.Forms.NumericUpDown();
@@ -85,7 +85,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.numBaseDC = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.chkMAcc = new System.Windows.Forms.CheckBox();
             this.chkIfx3 = new System.Windows.Forms.CheckBox();
@@ -110,11 +110,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReg)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -561,17 +561,17 @@
             this.tabControl1.Size = new System.Drawing.Size(673, 319);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPage2
             // 
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(665, 293);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Era Utilities";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(665, 293);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Era Utilities";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -745,17 +745,17 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Base Disable Cost";
             // 
-            // tabPage2
+            // tabPage1
             // 
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(665, 293);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "ClearSpeedCalculator";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(665, 293);
+            this.tabPage1.TabIndex = 1;
+            this.tabPage1.Text = "ClearSpeedCalculator";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -877,12 +877,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReg)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -923,9 +923,9 @@
 		private System.Windows.Forms.NumericUpDown numM;
 		private System.Windows.Forms.NumericUpDown numH;
 		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.GroupBox groupBox3;
 		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.Button btnDisableCalc;
 		private System.Windows.Forms.NumericUpDown numDisableN;
 		private System.Windows.Forms.TextBox txtIterEDCn;
