@@ -139,7 +139,6 @@
             // 
             // btnCalculateXP
             // 
-            this.btnCalculateXP.BackColor = System.Drawing.Color.Black;
             this.btnCalculateXP.Location = new System.Drawing.Point(125, 172);
             this.btnCalculateXP.Name = "btnCalculateXP";
             this.btnCalculateXP.Size = new System.Drawing.Size(75, 23);
@@ -150,8 +149,6 @@
             // 
             // txtLowXP
             // 
-            this.txtLowXP.BackColor = System.Drawing.Color.DimGray;
-            this.txtLowXP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtLowXP.Location = new System.Drawing.Point(6, 235);
             this.txtLowXP.Name = "txtLowXP";
             this.txtLowXP.ReadOnly = true;
@@ -160,8 +157,6 @@
             // 
             // txtHighXP
             // 
-            this.txtHighXP.BackColor = System.Drawing.Color.DimGray;
-            this.txtHighXP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtHighXP.Location = new System.Drawing.Point(218, 235);
             this.txtHighXP.Name = "txtHighXP";
             this.txtHighXP.ReadOnly = true;
@@ -170,8 +165,6 @@
             // 
             // txtAveXP
             // 
-            this.txtAveXP.BackColor = System.Drawing.Color.DimGray;
-            this.txtAveXP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtAveXP.Location = new System.Drawing.Point(112, 235);
             this.txtAveXP.Name = "txtAveXP";
             this.txtAveXP.ReadOnly = true;
@@ -196,7 +189,6 @@
             this.groupBox1.Controls.Add(this.btnCalculateXP);
             this.groupBox1.Controls.Add(this.txtHighXP);
             this.groupBox1.Controls.Add(this.txtLowXP);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(324, 261);
@@ -208,7 +200,7 @@
             // 
             this.chkResDrop.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chkResDrop.AutoSize = true;
-            this.chkResDrop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.chkResDrop.BackColor = System.Drawing.Color.LightGray;
             this.chkResDrop.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkResDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.chkResDrop.Location = new System.Drawing.Point(91, 144);
@@ -220,8 +212,6 @@
             // 
             // numAwALvl
             // 
-            this.numAwALvl.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.numAwALvl.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numAwALvl.Location = new System.Drawing.Point(203, 95);
             this.numAwALvl.Maximum = new decimal(new int[] {
             5,
@@ -248,7 +238,6 @@
             // 
             // txtEraXPDropStat
             // 
-            this.txtEraXPDropStat.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtEraXPDropStat.Location = new System.Drawing.Point(194, 124);
             this.txtEraXPDropStat.Name = "txtEraXPDropStat";
             this.txtEraXPDropStat.Size = new System.Drawing.Size(100, 20);
@@ -265,7 +254,6 @@
             // 
             // txtEra
             // 
-            this.txtEra.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtEra.Location = new System.Drawing.Point(131, 31);
             this.txtEra.Name = "txtEra";
             this.txtEra.Size = new System.Drawing.Size(100, 20);
@@ -273,8 +261,6 @@
             // 
             // numXPLvl
             // 
-            this.numXPLvl.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.numXPLvl.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numXPLvl.Location = new System.Drawing.Point(203, 68);
             this.numXPLvl.Maximum = new decimal(new int[] {
             25,
@@ -336,7 +322,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtKills);
             this.groupBox2.Controls.Add(this.lblEnemiesKilledCSPD);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(343, 261);
@@ -346,7 +332,6 @@
             // 
             // cbRTorGT
             // 
-            this.cbRTorGT.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cbRTorGT.FormattingEnabled = true;
             this.cbRTorGT.Items.AddRange(new object[] {
             "Real Time",
@@ -358,7 +343,6 @@
             // 
             // btnCalKill
             // 
-            this.btnCalKill.BackColor = System.Drawing.Color.Black;
             this.btnCalKill.Location = new System.Drawing.Point(210, 56);
             this.btnCalKill.Name = "btnCalKill";
             this.btnCalKill.Size = new System.Drawing.Size(96, 23);
@@ -369,7 +353,6 @@
             // 
             // cBDifficulty
             // 
-            this.cBDifficulty.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cBDifficulty.FormattingEnabled = true;
             this.cBDifficulty.Items.AddRange(new object[] {
             "Easy",
@@ -406,7 +389,6 @@
             // 
             // numS
             // 
-            this.numS.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numS.Location = new System.Drawing.Point(220, 154);
             this.numS.Maximum = new decimal(new int[] {
             60,
@@ -419,7 +401,6 @@
             // 
             // numM
             // 
-            this.numM.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numM.Location = new System.Drawing.Point(148, 154);
             this.numM.Maximum = new decimal(new int[] {
             60,
@@ -432,7 +413,6 @@
             // 
             // numH
             // 
-            this.numH.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numH.Location = new System.Drawing.Point(74, 154);
             this.numH.Maximum = new decimal(new int[] {
             1000000,
@@ -445,7 +425,6 @@
             // 
             // btnCSpd
             // 
-            this.btnCSpd.BackColor = System.Drawing.Color.Black;
             this.btnCSpd.Location = new System.Drawing.Point(207, 194);
             this.btnCSpd.Name = "btnCSpd";
             this.btnCSpd.Size = new System.Drawing.Size(75, 21);
@@ -456,7 +435,6 @@
             // 
             // numReg
             // 
-            this.numReg.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numReg.Location = new System.Drawing.Point(141, 194);
             this.numReg.Maximum = new decimal(new int[] {
             15,
@@ -517,7 +495,7 @@
             // 
             // txtKills
             // 
-            this.txtKills.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtKills.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtKills.Location = new System.Drawing.Point(194, 36);
             this.txtKills.Name = "txtKills";
             this.txtKills.Size = new System.Drawing.Size(111, 20);
@@ -535,8 +513,6 @@
             // 
             // txtCSpd
             // 
-            this.txtCSpd.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtCSpd.ForeColor = System.Drawing.SystemColors.Info;
             this.txtCSpd.Location = new System.Drawing.Point(136, 235);
             this.txtCSpd.Name = "txtCSpd";
             this.txtCSpd.ReadOnly = true;
@@ -563,8 +539,6 @@
             // 
             // rtbReturn
             // 
-            this.rtbReturn.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.rtbReturn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rtbReturn.Location = new System.Drawing.Point(12, 393);
             this.rtbReturn.Name = "rtbReturn";
             this.rtbReturn.ReadOnly = true;
@@ -575,7 +549,6 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(18, 377);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 13);
@@ -594,7 +567,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -614,7 +587,7 @@
             this.groupBox4.Controls.Add(this.txtCSpd);
             this.groupBox4.Controls.Add(this.lblDifficulty);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.groupBox4.Location = new System.Drawing.Point(355, 6);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(304, 261);
@@ -657,8 +630,6 @@
             // 
             // txtKpS
             // 
-            this.txtKpS.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtKpS.ForeColor = System.Drawing.SystemColors.Info;
             this.txtKpS.Location = new System.Drawing.Point(141, 208);
             this.txtKpS.Name = "txtKpS";
             this.txtKpS.ReadOnly = true;
@@ -676,7 +647,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -702,7 +673,6 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.numBaseDC);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(336, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(323, 261);
@@ -712,7 +682,6 @@
             // 
             // btnDisableCalc
             // 
-            this.btnDisableCalc.BackColor = System.Drawing.Color.Black;
             this.btnDisableCalc.Location = new System.Drawing.Point(123, 209);
             this.btnDisableCalc.Name = "btnDisableCalc";
             this.btnDisableCalc.Size = new System.Drawing.Size(75, 23);
@@ -723,7 +692,6 @@
             // 
             // numDisableN
             // 
-            this.numDisableN.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numDisableN.Location = new System.Drawing.Point(59, 169);
             this.numDisableN.Maximum = new decimal(new int[] {
             10,
@@ -747,8 +715,6 @@
             // 
             // txtIterEDCn
             // 
-            this.txtIterEDCn.BackColor = System.Drawing.Color.DimGray;
-            this.txtIterEDCn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtIterEDCn.Location = new System.Drawing.Point(161, 169);
             this.txtIterEDCn.Name = "txtIterEDCn";
             this.txtIterEDCn.ReadOnly = true;
@@ -766,8 +732,6 @@
             // 
             // txtIterEDC5
             // 
-            this.txtIterEDC5.BackColor = System.Drawing.Color.DimGray;
-            this.txtIterEDC5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtIterEDC5.Location = new System.Drawing.Point(161, 143);
             this.txtIterEDC5.Name = "txtIterEDC5";
             this.txtIterEDC5.ReadOnly = true;
@@ -785,8 +749,6 @@
             // 
             // txtIterEDC4
             // 
-            this.txtIterEDC4.BackColor = System.Drawing.Color.DimGray;
-            this.txtIterEDC4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtIterEDC4.Location = new System.Drawing.Point(161, 117);
             this.txtIterEDC4.Name = "txtIterEDC4";
             this.txtIterEDC4.ReadOnly = true;
@@ -795,8 +757,6 @@
             // 
             // txtIterEDC3
             // 
-            this.txtIterEDC3.BackColor = System.Drawing.Color.DimGray;
-            this.txtIterEDC3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtIterEDC3.Location = new System.Drawing.Point(161, 91);
             this.txtIterEDC3.Name = "txtIterEDC3";
             this.txtIterEDC3.ReadOnly = true;
@@ -805,8 +765,6 @@
             // 
             // txtIterEDC2
             // 
-            this.txtIterEDC2.BackColor = System.Drawing.Color.DimGray;
-            this.txtIterEDC2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtIterEDC2.Location = new System.Drawing.Point(161, 65);
             this.txtIterEDC2.Name = "txtIterEDC2";
             this.txtIterEDC2.ReadOnly = true;
@@ -842,8 +800,6 @@
             // 
             // numBaseDC
             // 
-            this.numBaseDC.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.numBaseDC.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numBaseDC.Increment = new decimal(new int[] {
             10,
             0,
@@ -878,7 +834,6 @@
             this.lblConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblConvert.AutoSize = true;
             this.lblConvert.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblConvert.ForeColor = System.Drawing.SystemColors.Control;
             this.lblConvert.Location = new System.Drawing.Point(466, 6);
             this.lblConvert.Name = "lblConvert";
             this.lblConvert.Size = new System.Drawing.Size(202, 15);
@@ -889,7 +844,6 @@
             // 
             this.lblCV.AutoSize = true;
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCV.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
             this.lblCV.Size = new System.Drawing.Size(172, 15);
@@ -909,7 +863,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(697, 490);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);

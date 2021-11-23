@@ -58,7 +58,6 @@ namespace tptcalc
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(9, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
@@ -68,7 +67,6 @@ namespace tptcalc
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(9, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
@@ -78,7 +76,6 @@ namespace tptcalc
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(9, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
@@ -88,7 +85,6 @@ namespace tptcalc
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(9, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 13);
@@ -98,7 +94,6 @@ namespace tptcalc
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(9, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
@@ -108,7 +103,6 @@ namespace tptcalc
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(206, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
@@ -118,7 +112,6 @@ namespace tptcalc
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(206, 75);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(19, 13);
@@ -128,7 +121,6 @@ namespace tptcalc
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(206, 101);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
@@ -138,7 +130,6 @@ namespace tptcalc
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(206, 127);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 13);
@@ -148,7 +139,6 @@ namespace tptcalc
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
             this.label10.Location = new System.Drawing.Point(206, 153);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 13);
@@ -157,8 +147,6 @@ namespace tptcalc
             // 
             // txtNeu
             // 
-            this.txtNeu.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNeu.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNeu.Location = new System.Drawing.Point(83, 46);
             this.txtNeu.Name = "txtNeu";
             this.txtNeu.Size = new System.Drawing.Size(100, 20);
@@ -166,8 +154,6 @@ namespace tptcalc
             // 
             // txtLig
             // 
-            this.txtLig.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtLig.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtLig.Location = new System.Drawing.Point(83, 72);
             this.txtLig.Name = "txtLig";
             this.txtLig.Size = new System.Drawing.Size(100, 20);
@@ -175,8 +161,6 @@ namespace tptcalc
             // 
             // txtEle
             // 
-            this.txtEle.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtEle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEle.Location = new System.Drawing.Point(83, 98);
             this.txtEle.Name = "txtEle";
             this.txtEle.Size = new System.Drawing.Size(100, 20);
@@ -184,8 +168,6 @@ namespace tptcalc
             // 
             // txtFir
             // 
-            this.txtFir.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtFir.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtFir.Location = new System.Drawing.Point(83, 124);
             this.txtFir.Name = "txtFir";
             this.txtFir.Size = new System.Drawing.Size(100, 20);
@@ -193,8 +175,6 @@ namespace tptcalc
             // 
             // txtDar
             // 
-            this.txtDar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtDar.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtDar.Location = new System.Drawing.Point(83, 150);
             this.txtDar.Name = "txtDar";
             this.txtDar.Size = new System.Drawing.Size(100, 20);
@@ -202,8 +182,6 @@ namespace tptcalc
             // 
             // txtNat
             // 
-            this.txtNat.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNat.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNat.Location = new System.Drawing.Point(280, 46);
             this.txtNat.Name = "txtNat";
             this.txtNat.Size = new System.Drawing.Size(100, 20);
@@ -211,8 +189,6 @@ namespace tptcalc
             // 
             // txtAir
             // 
-            this.txtAir.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtAir.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtAir.Location = new System.Drawing.Point(280, 72);
             this.txtAir.Name = "txtAir";
             this.txtAir.Size = new System.Drawing.Size(100, 20);
@@ -220,8 +196,6 @@ namespace tptcalc
             // 
             // txtWat
             // 
-            this.txtWat.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtWat.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtWat.Location = new System.Drawing.Point(280, 98);
             this.txtWat.Name = "txtWat";
             this.txtWat.Size = new System.Drawing.Size(100, 20);
@@ -229,8 +203,6 @@ namespace tptcalc
             // 
             // txtEar
             // 
-            this.txtEar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtEar.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEar.Location = new System.Drawing.Point(280, 124);
             this.txtEar.Name = "txtEar";
             this.txtEar.Size = new System.Drawing.Size(100, 20);
@@ -238,8 +210,6 @@ namespace tptcalc
             // 
             // txtUni
             // 
-            this.txtUni.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtUni.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtUni.Location = new System.Drawing.Point(280, 150);
             this.txtUni.Name = "txtUni";
             this.txtUni.Size = new System.Drawing.Size(100, 20);
@@ -247,20 +217,17 @@ namespace tptcalc
             // 
             // btnCalculate
             // 
-            this.btnCalculate.BackColor = System.Drawing.Color.Black;
-            this.btnCalculate.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCalculate.Location = new System.Drawing.Point(210, 186);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(171, 23);
             this.btnCalculate.TabIndex = 20;
             this.btnCalculate.Text = "Calculate";
-            this.btnCalculate.UseVisualStyleBackColor = false;
+            this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.Control;
             this.label11.Location = new System.Drawing.Point(9, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(268, 26);
@@ -270,7 +237,6 @@ namespace tptcalc
             // 
             // rtbF2_Return
             // 
-            this.rtbF2_Return.ForeColor = System.Drawing.SystemColors.Control;
             this.rtbF2_Return.Location = new System.Drawing.Point(359, 186);
             this.rtbF2_Return.Name = "rtbF2_Return";
             this.rtbF2_Return.Size = new System.Drawing.Size(21, 23);
@@ -280,7 +246,6 @@ namespace tptcalc
             // chkKeep
             // 
             this.chkKeep.AutoSize = true;
-            this.chkKeep.ForeColor = System.Drawing.SystemColors.Control;
             this.chkKeep.Location = new System.Drawing.Point(12, 192);
             this.chkKeep.Name = "chkKeep";
             this.chkKeep.Size = new System.Drawing.Size(191, 17);
@@ -292,7 +257,6 @@ namespace tptcalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(393, 221);
             this.Controls.Add(this.chkKeep);
             this.Controls.Add(this.label11);
