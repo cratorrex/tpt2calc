@@ -69,6 +69,13 @@
             this.rtbReturn = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkMAcc = new System.Windows.Forms.CheckBox();
+            this.chkIfx3 = new System.Windows.Forms.CheckBox();
+            this.chkWC = new System.Windows.Forms.CheckBox();
+            this.txtKpS = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnDisableCalc = new System.Windows.Forms.Button();
@@ -85,13 +92,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.numBaseDC = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.chkMAcc = new System.Windows.Forms.CheckBox();
-            this.chkIfx3 = new System.Windows.Forms.CheckBox();
-            this.chkWC = new System.Windows.Forms.CheckBox();
-            this.txtKpS = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.ttRDrop = new System.Windows.Forms.ToolTip(this.components);
             this.ttNamedConvert = new System.Windows.Forms.ToolTip(this.components);
             this.lblConvert = new System.Windows.Forms.Label();
@@ -110,12 +110,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReg)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,16 +139,19 @@
             // 
             // btnCalculateXP
             // 
+            this.btnCalculateXP.BackColor = System.Drawing.Color.Black;
             this.btnCalculateXP.Location = new System.Drawing.Point(125, 172);
             this.btnCalculateXP.Name = "btnCalculateXP";
             this.btnCalculateXP.Size = new System.Drawing.Size(75, 23);
             this.btnCalculateXP.TabIndex = 2;
             this.btnCalculateXP.Text = "Calculate";
-            this.btnCalculateXP.UseVisualStyleBackColor = true;
+            this.btnCalculateXP.UseVisualStyleBackColor = false;
             this.btnCalculateXP.Click += new System.EventHandler(this.btnCalculateXP_Click);
             // 
             // txtLowXP
             // 
+            this.txtLowXP.BackColor = System.Drawing.Color.DimGray;
+            this.txtLowXP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtLowXP.Location = new System.Drawing.Point(6, 235);
             this.txtLowXP.Name = "txtLowXP";
             this.txtLowXP.ReadOnly = true;
@@ -157,6 +160,8 @@
             // 
             // txtHighXP
             // 
+            this.txtHighXP.BackColor = System.Drawing.Color.DimGray;
+            this.txtHighXP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtHighXP.Location = new System.Drawing.Point(218, 235);
             this.txtHighXP.Name = "txtHighXP";
             this.txtHighXP.ReadOnly = true;
@@ -165,6 +170,8 @@
             // 
             // txtAveXP
             // 
+            this.txtAveXP.BackColor = System.Drawing.Color.DimGray;
+            this.txtAveXP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtAveXP.Location = new System.Drawing.Point(112, 235);
             this.txtAveXP.Name = "txtAveXP";
             this.txtAveXP.ReadOnly = true;
@@ -189,6 +196,7 @@
             this.groupBox1.Controls.Add(this.btnCalculateXP);
             this.groupBox1.Controls.Add(this.txtHighXP);
             this.groupBox1.Controls.Add(this.txtLowXP);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(324, 261);
@@ -200,7 +208,7 @@
             // 
             this.chkResDrop.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chkResDrop.AutoSize = true;
-            this.chkResDrop.BackColor = System.Drawing.Color.Gainsboro;
+            this.chkResDrop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.chkResDrop.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkResDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.chkResDrop.Location = new System.Drawing.Point(91, 144);
@@ -212,6 +220,8 @@
             // 
             // numAwALvl
             // 
+            this.numAwALvl.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.numAwALvl.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numAwALvl.Location = new System.Drawing.Point(203, 95);
             this.numAwALvl.Maximum = new decimal(new int[] {
             5,
@@ -238,6 +248,7 @@
             // 
             // txtEraXPDropStat
             // 
+            this.txtEraXPDropStat.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtEraXPDropStat.Location = new System.Drawing.Point(194, 124);
             this.txtEraXPDropStat.Name = "txtEraXPDropStat";
             this.txtEraXPDropStat.Size = new System.Drawing.Size(100, 20);
@@ -254,6 +265,7 @@
             // 
             // txtEra
             // 
+            this.txtEra.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtEra.Location = new System.Drawing.Point(131, 31);
             this.txtEra.Name = "txtEra";
             this.txtEra.Size = new System.Drawing.Size(100, 20);
@@ -261,6 +273,8 @@
             // 
             // numXPLvl
             // 
+            this.numXPLvl.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.numXPLvl.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numXPLvl.Location = new System.Drawing.Point(203, 68);
             this.numXPLvl.Maximum = new decimal(new int[] {
             25,
@@ -305,6 +319,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.cbRTorGT);
             this.groupBox2.Controls.Add(this.btnCalKill);
             this.groupBox2.Controls.Add(this.cBDifficulty);
@@ -321,15 +336,17 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtKills);
             this.groupBox2.Controls.Add(this.lblEnemiesKilledCSPD);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(343, 261);
             this.groupBox2.TabIndex = 200;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ClearSpeedCalculator (CSpeedCalc)";
+            this.groupBox2.Text = "y";
             // 
             // cbRTorGT
             // 
+            this.cbRTorGT.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cbRTorGT.FormattingEnabled = true;
             this.cbRTorGT.Items.AddRange(new object[] {
             "Real Time",
@@ -341,16 +358,18 @@
             // 
             // btnCalKill
             // 
+            this.btnCalKill.BackColor = System.Drawing.Color.Black;
             this.btnCalKill.Location = new System.Drawing.Point(210, 56);
             this.btnCalKill.Name = "btnCalKill";
             this.btnCalKill.Size = new System.Drawing.Size(96, 23);
             this.btnCalKill.TabIndex = 201;
             this.btnCalKill.Text = "Calculate Kills";
-            this.btnCalKill.UseVisualStyleBackColor = true;
+            this.btnCalKill.UseVisualStyleBackColor = false;
             this.btnCalKill.Click += new System.EventHandler(this.btnCalKill_Click);
             // 
             // cBDifficulty
             // 
+            this.cBDifficulty.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cBDifficulty.FormattingEnabled = true;
             this.cBDifficulty.Items.AddRange(new object[] {
             "Easy",
@@ -387,6 +406,7 @@
             // 
             // numS
             // 
+            this.numS.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numS.Location = new System.Drawing.Point(220, 154);
             this.numS.Maximum = new decimal(new int[] {
             60,
@@ -399,6 +419,7 @@
             // 
             // numM
             // 
+            this.numM.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numM.Location = new System.Drawing.Point(148, 154);
             this.numM.Maximum = new decimal(new int[] {
             60,
@@ -411,6 +432,7 @@
             // 
             // numH
             // 
+            this.numH.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numH.Location = new System.Drawing.Point(74, 154);
             this.numH.Maximum = new decimal(new int[] {
             1000000,
@@ -423,16 +445,18 @@
             // 
             // btnCSpd
             // 
+            this.btnCSpd.BackColor = System.Drawing.Color.Black;
             this.btnCSpd.Location = new System.Drawing.Point(207, 194);
             this.btnCSpd.Name = "btnCSpd";
             this.btnCSpd.Size = new System.Drawing.Size(75, 21);
             this.btnCSpd.TabIndex = 8;
             this.btnCSpd.Text = "Calculate";
-            this.btnCSpd.UseVisualStyleBackColor = true;
+            this.btnCSpd.UseVisualStyleBackColor = false;
             this.btnCSpd.Click += new System.EventHandler(this.btnCSpd_Click);
             // 
             // numReg
             // 
+            this.numReg.BackColor = System.Drawing.SystemColors.ControlDark;
             this.numReg.Location = new System.Drawing.Point(141, 194);
             this.numReg.Maximum = new decimal(new int[] {
             15,
@@ -493,6 +517,7 @@
             // 
             // txtKills
             // 
+            this.txtKills.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtKills.Location = new System.Drawing.Point(194, 36);
             this.txtKills.Name = "txtKills";
             this.txtKills.Size = new System.Drawing.Size(111, 20);
@@ -510,6 +535,8 @@
             // 
             // txtCSpd
             // 
+            this.txtCSpd.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtCSpd.ForeColor = System.Drawing.SystemColors.Info;
             this.txtCSpd.Location = new System.Drawing.Point(136, 235);
             this.txtCSpd.Name = "txtCSpd";
             this.txtCSpd.ReadOnly = true;
@@ -536,8 +563,11 @@
             // 
             // rtbReturn
             // 
+            this.rtbReturn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.rtbReturn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rtbReturn.Location = new System.Drawing.Point(12, 393);
             this.rtbReturn.Name = "rtbReturn";
+            this.rtbReturn.ReadOnly = true;
             this.rtbReturn.Size = new System.Drawing.Size(673, 85);
             this.rtbReturn.TabIndex = 99;
             this.rtbReturn.Text = "";
@@ -545,6 +575,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(18, 377);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 13);
@@ -561,192 +592,9 @@
             this.tabControl1.Size = new System.Drawing.Size(673, 319);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(665, 293);
-            this.tabPage2.TabIndex = 0;
-            this.tabPage2.Text = "Era Utilities";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnDisableCalc);
-            this.groupBox3.Controls.Add(this.numDisableN);
-            this.groupBox3.Controls.Add(this.txtIterEDCn);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.txtIterEDC5);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.txtIterEDC4);
-            this.groupBox3.Controls.Add(this.txtIterEDC3);
-            this.groupBox3.Controls.Add(this.txtIterEDC2);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.numBaseDC);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(336, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(323, 261);
-            this.groupBox3.TabIndex = 100;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "ElementDisableCalculator";
-            // 
-            // btnDisableCalc
-            // 
-            this.btnDisableCalc.Location = new System.Drawing.Point(123, 209);
-            this.btnDisableCalc.Name = "btnDisableCalc";
-            this.btnDisableCalc.Size = new System.Drawing.Size(75, 23);
-            this.btnDisableCalc.TabIndex = 102;
-            this.btnDisableCalc.Text = "Calculate";
-            this.btnDisableCalc.UseVisualStyleBackColor = true;
-            this.btnDisableCalc.Click += new System.EventHandler(this.btnDisableCalc_Click);
-            // 
-            // numDisableN
-            // 
-            this.numDisableN.Location = new System.Drawing.Point(59, 169);
-            this.numDisableN.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numDisableN.Minimum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.numDisableN.Name = "numDisableN";
-            this.numDisableN.Size = new System.Drawing.Size(36, 20);
-            this.numDisableN.TabIndex = 101;
-            this.numDisableN.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
-            this.numDisableN.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            // 
-            // txtIterEDCn
-            // 
-            this.txtIterEDCn.Location = new System.Drawing.Point(161, 169);
-            this.txtIterEDCn.Name = "txtIterEDCn";
-            this.txtIterEDCn.ReadOnly = true;
-            this.txtIterEDCn.Size = new System.Drawing.Size(129, 20);
-            this.txtIterEDCn.TabIndex = 11;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(95, 172);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(54, 13);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "th Disable";
-            // 
-            // txtIterEDC5
-            // 
-            this.txtIterEDC5.Location = new System.Drawing.Point(161, 143);
-            this.txtIterEDC5.Name = "txtIterEDC5";
-            this.txtIterEDC5.ReadOnly = true;
-            this.txtIterEDC5.Size = new System.Drawing.Size(100, 20);
-            this.txtIterEDC5.TabIndex = 9;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(89, 146);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 13);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "5th Disable";
-            // 
-            // txtIterEDC4
-            // 
-            this.txtIterEDC4.Location = new System.Drawing.Point(161, 117);
-            this.txtIterEDC4.Name = "txtIterEDC4";
-            this.txtIterEDC4.ReadOnly = true;
-            this.txtIterEDC4.Size = new System.Drawing.Size(100, 20);
-            this.txtIterEDC4.TabIndex = 7;
-            // 
-            // txtIterEDC3
-            // 
-            this.txtIterEDC3.Location = new System.Drawing.Point(161, 91);
-            this.txtIterEDC3.Name = "txtIterEDC3";
-            this.txtIterEDC3.ReadOnly = true;
-            this.txtIterEDC3.Size = new System.Drawing.Size(100, 20);
-            this.txtIterEDC3.TabIndex = 6;
-            // 
-            // txtIterEDC2
-            // 
-            this.txtIterEDC2.Location = new System.Drawing.Point(161, 65);
-            this.txtIterEDC2.Name = "txtIterEDC2";
-            this.txtIterEDC2.ReadOnly = true;
-            this.txtIterEDC2.Size = new System.Drawing.Size(100, 20);
-            this.txtIterEDC2.TabIndex = 5;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(89, 120);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 13);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "4th Disable";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(90, 94);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 13);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "3rd Disable";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(48, 68);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(102, 13);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Cost for 2nd Disable";
-            // 
-            // numBaseDC
-            // 
-            this.numBaseDC.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numBaseDC.Location = new System.Drawing.Point(161, 39);
-            this.numBaseDC.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numBaseDC.Name = "numBaseDC";
-            this.numBaseDC.Size = new System.Drawing.Size(120, 20);
-            this.numBaseDC.TabIndex = 1;
-            this.numBaseDC.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(56, 41);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Base Disable Cost";
-            // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -755,7 +603,6 @@
             this.tabPage1.Size = new System.Drawing.Size(665, 293);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "ClearSpeedCalculator";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -767,6 +614,7 @@
             this.groupBox4.Controls.Add(this.txtCSpd);
             this.groupBox4.Controls.Add(this.lblDifficulty);
             this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox4.Location = new System.Drawing.Point(355, 6);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(304, 261);
@@ -809,6 +657,8 @@
             // 
             // txtKpS
             // 
+            this.txtKpS.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtKpS.ForeColor = System.Drawing.SystemColors.Info;
             this.txtKpS.Location = new System.Drawing.Point(141, 208);
             this.txtKpS.Name = "txtKpS";
             this.txtKpS.ReadOnly = true;
@@ -824,11 +674,211 @@
             this.label21.TabIndex = 104;
             this.label21.Text = "Kills per Real Time Second:";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(665, 293);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Era Utilities";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnDisableCalc);
+            this.groupBox3.Controls.Add(this.numDisableN);
+            this.groupBox3.Controls.Add(this.txtIterEDCn);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.txtIterEDC5);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.txtIterEDC4);
+            this.groupBox3.Controls.Add(this.txtIterEDC3);
+            this.groupBox3.Controls.Add(this.txtIterEDC2);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.numBaseDC);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Location = new System.Drawing.Point(336, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(323, 261);
+            this.groupBox3.TabIndex = 100;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "ElementDisableCalculator";
+            // 
+            // btnDisableCalc
+            // 
+            this.btnDisableCalc.BackColor = System.Drawing.Color.Black;
+            this.btnDisableCalc.Location = new System.Drawing.Point(123, 209);
+            this.btnDisableCalc.Name = "btnDisableCalc";
+            this.btnDisableCalc.Size = new System.Drawing.Size(75, 23);
+            this.btnDisableCalc.TabIndex = 102;
+            this.btnDisableCalc.Text = "Calculate";
+            this.btnDisableCalc.UseVisualStyleBackColor = false;
+            this.btnDisableCalc.Click += new System.EventHandler(this.btnDisableCalc_Click);
+            // 
+            // numDisableN
+            // 
+            this.numDisableN.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.numDisableN.Location = new System.Drawing.Point(59, 169);
+            this.numDisableN.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numDisableN.Minimum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numDisableN.Name = "numDisableN";
+            this.numDisableN.Size = new System.Drawing.Size(36, 20);
+            this.numDisableN.TabIndex = 101;
+            this.numDisableN.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.numDisableN.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // txtIterEDCn
+            // 
+            this.txtIterEDCn.BackColor = System.Drawing.Color.DimGray;
+            this.txtIterEDCn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtIterEDCn.Location = new System.Drawing.Point(161, 169);
+            this.txtIterEDCn.Name = "txtIterEDCn";
+            this.txtIterEDCn.ReadOnly = true;
+            this.txtIterEDCn.Size = new System.Drawing.Size(129, 20);
+            this.txtIterEDCn.TabIndex = 11;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(95, 172);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(54, 13);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "th Disable";
+            // 
+            // txtIterEDC5
+            // 
+            this.txtIterEDC5.BackColor = System.Drawing.Color.DimGray;
+            this.txtIterEDC5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtIterEDC5.Location = new System.Drawing.Point(161, 143);
+            this.txtIterEDC5.Name = "txtIterEDC5";
+            this.txtIterEDC5.ReadOnly = true;
+            this.txtIterEDC5.Size = new System.Drawing.Size(100, 20);
+            this.txtIterEDC5.TabIndex = 9;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(89, 146);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(60, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "5th Disable";
+            // 
+            // txtIterEDC4
+            // 
+            this.txtIterEDC4.BackColor = System.Drawing.Color.DimGray;
+            this.txtIterEDC4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtIterEDC4.Location = new System.Drawing.Point(161, 117);
+            this.txtIterEDC4.Name = "txtIterEDC4";
+            this.txtIterEDC4.ReadOnly = true;
+            this.txtIterEDC4.Size = new System.Drawing.Size(100, 20);
+            this.txtIterEDC4.TabIndex = 7;
+            // 
+            // txtIterEDC3
+            // 
+            this.txtIterEDC3.BackColor = System.Drawing.Color.DimGray;
+            this.txtIterEDC3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtIterEDC3.Location = new System.Drawing.Point(161, 91);
+            this.txtIterEDC3.Name = "txtIterEDC3";
+            this.txtIterEDC3.ReadOnly = true;
+            this.txtIterEDC3.Size = new System.Drawing.Size(100, 20);
+            this.txtIterEDC3.TabIndex = 6;
+            // 
+            // txtIterEDC2
+            // 
+            this.txtIterEDC2.BackColor = System.Drawing.Color.DimGray;
+            this.txtIterEDC2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtIterEDC2.Location = new System.Drawing.Point(161, 65);
+            this.txtIterEDC2.Name = "txtIterEDC2";
+            this.txtIterEDC2.ReadOnly = true;
+            this.txtIterEDC2.Size = new System.Drawing.Size(100, 20);
+            this.txtIterEDC2.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(89, 120);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "4th Disable";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(90, 94);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(60, 13);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "3rd Disable";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(48, 68);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(102, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Cost for 2nd Disable";
+            // 
+            // numBaseDC
+            // 
+            this.numBaseDC.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.numBaseDC.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.numBaseDC.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numBaseDC.Location = new System.Drawing.Point(161, 39);
+            this.numBaseDC.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numBaseDC.Name = "numBaseDC";
+            this.numBaseDC.Size = new System.Drawing.Size(120, 20);
+            this.numBaseDC.TabIndex = 1;
+            this.numBaseDC.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(56, 41);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(93, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Base Disable Cost";
+            // 
             // lblConvert
             // 
             this.lblConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblConvert.AutoSize = true;
             this.lblConvert.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblConvert.ForeColor = System.Drawing.SystemColors.Control;
             this.lblConvert.Location = new System.Drawing.Point(466, 6);
             this.lblConvert.Name = "lblConvert";
             this.lblConvert.Size = new System.Drawing.Size(202, 15);
@@ -839,11 +889,12 @@
             // 
             this.lblCV.AutoSize = true;
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCV.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
-            this.lblCV.Size = new System.Drawing.Size(86, 15);
+            this.lblCV.Size = new System.Drawing.Size(172, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.4XXX";
+            this.lblCV.Text = "Version: 0.4XXX (Dark Mode Test)";
             // 
             // panel1
             // 
@@ -858,6 +909,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(697, 490);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
@@ -877,14 +929,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReg)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
