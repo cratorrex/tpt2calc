@@ -1,4 +1,4 @@
-# tpt2eracalc
+# tpt2calc (was tpt2eracalc)
 Check the Releases section to download the calculator.
 ##### Allows support for "short named" and "scientific" notations! (on top of full notation)
 ###### Unsure of how to make it into a web application so if anyone wants to, feel free!
