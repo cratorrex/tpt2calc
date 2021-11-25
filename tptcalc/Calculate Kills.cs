@@ -41,5 +41,20 @@ namespace tptcalc
             if (chkKeep.Checked == false)
             { this.Close(); }
         }
+
+        public void DMT()
+        {//DMT
+            if (Properties.Settings.Default.ADark) //== true
+            { BackColor = default; ForeColor = default; btnCalc.BackColor = default; }
+            else
+            { BackColor = Color.Black; ForeColor = Color.White; btnCalc.BackColor = Color.DimGray; }
+        }
+
+        private void Calculate_Kills_Load(object sender, EventArgs e)
+        {
+            //settings
+            DMT();
+            //
+        }
     }
 }

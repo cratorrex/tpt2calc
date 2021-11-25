@@ -49,7 +49,7 @@ namespace tptcalc
             this.txtWat = new System.Windows.Forms.TextBox();
             this.txtEar = new System.Windows.Forms.TextBox();
             this.txtUni = new System.Windows.Forms.TextBox();
-            this.btnCalculate = new System.Windows.Forms.Button();
+            this.btnCalc = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.rtbF2_Return = new System.Windows.Forms.RichTextBox();
             this.chkKeep = new System.Windows.Forms.CheckBox();
@@ -215,15 +215,15 @@ namespace tptcalc
             this.txtUni.Size = new System.Drawing.Size(100, 20);
             this.txtUni.TabIndex = 19;
             // 
-            // btnCalculate
+            // btnCalc
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(210, 186);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(171, 23);
-            this.btnCalculate.TabIndex = 20;
-            this.btnCalculate.Text = "Calculate";
-            this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            this.btnCalc.Location = new System.Drawing.Point(210, 186);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(171, 23);
+            this.btnCalc.TabIndex = 20;
+            this.btnCalc.Text = "Calculate";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // label11
             // 
@@ -260,7 +260,7 @@ namespace tptcalc
             this.ClientSize = new System.Drawing.Size(393, 221);
             this.Controls.Add(this.chkKeep);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnCalculate);
+            this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.txtUni);
             this.Controls.Add(this.txtEar);
             this.Controls.Add(this.txtWat);
@@ -284,6 +284,7 @@ namespace tptcalc
             this.Controls.Add(this.rtbF2_Return);
             this.Name = "Calculate_Kills";
             this.Text = "Calculate_Kills";
+            this.Load += new System.EventHandler(this.Calculate_Kills_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +312,7 @@ namespace tptcalc
         private System.Windows.Forms.TextBox txtWat;
         private System.Windows.Forms.TextBox txtEar;
         private System.Windows.Forms.TextBox txtUni;
-        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RichTextBox rtbF2_Return;
         private System.Windows.Forms.CheckBox chkKeep;

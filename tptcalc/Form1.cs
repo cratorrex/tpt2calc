@@ -22,6 +22,12 @@ namespace tptcalc
 		readonly convert convert = new convert();
 		bool im = false;
 
+		//settings
+		bool dark = Properties.Settings.Default.ADark;
+
+		private void btnDMT_Click(object sender, EventArgs e)
+		{ DMT(dark); }
+
 		//Start EraXPCalc
 
 		private void btnCalculateXP_Click(object sender, EventArgs e)
@@ -75,6 +81,7 @@ namespace tptcalc
 			}
 
 		}
+
 		private void btnCalKill_Click(object sender, EventArgs e)
 		{
 			Calculate_Kills calculate_Kills = new Calculate_Kills(this);
@@ -159,10 +166,57 @@ namespace tptcalc
 
 		//End DisableCalc
 		//Start Form Loading and other stuff
+		
+		private void DMT(bool Dark)
+		{
+			TabPage[] tpcontrol = { tabPage1, tabPage2 };
+			GroupBox[] gbcontrol = { groupBox1, groupBox2, groupBox3, groupBox4 };
+			Button[] btncontrol = { btnDMT, btnCalKill, btnCSpd };
 
-        private void Form1_Load(object sender, EventArgs e)
+
+			if (Dark == false)
+			{
+				BackColor = Color.Black;
+				ForeColor = Color.White;
+				
+				foreach (TabPage tp in tpcontrol)
+                { tp.BackColor = Color.DimGray; }
+
+				foreach (Button btn in btncontrol)
+				{ btn.BackColor = Color.DimGray; }
+
+				foreach (GroupBox gb in gbcontrol)
+                { gb.ForeColor = Color.White; }
+
+				dark = true; Properties.Settings.Default.ADark = false;
+			}
+			else /*if (Dark)*/
+			{
+				BackColor = default;
+				ForeColor = default;
+
+				foreach (TabPage tp in tpcontrol)
+				{ tp.BackColor = default; }
+
+				foreach (Button btn in btncontrol)
+				{ btn.BackColor = default; }
+
+				foreach (GroupBox gb in gbcontrol)
+				{ gb.ForeColor = default; }
+
+				dark = false; Properties.Settings.Default.ADark = true;
+			}
+
+
+			Properties.Settings.Default.Save();
+		}
+
+
+		private void Form1_Load(object sender, EventArgs e)
         {
-			txtEra.Focus();
+			//settings
+			DMT(dark);
+			//
 
 			//Managing some tooltips
 			ttAWA.AutoPopDelay = 7500;
@@ -183,7 +237,10 @@ namespace tptcalc
 			//DisableCalc
 
 			//Misc Tooltips
-			ttCV.SetToolTip(lblCV, "0.4XXX \nSmall Fixes, Small Additions." +
+			ttCV.SetToolTip(lblCV, "0.4.9 \nSuccessfully implemented Dark Mode! (Every new version would default to Light Mode ;-;) " +
+				"\n\t(but otherwise, your setting is remembered per new instance until the new versions, i think)" +
+				"\n0.5 is around the corner, and it'll make the tool more mainstream-catered." +
+				"\n\n0.4XXX \nSmall Fixes, Small Additions." +
 				"\n\t→Added an extra safeguard when using Calculate_Kills in the case they forgot to uncheck \"Calculate for one Element\"." +
 				"\n\t→Calculate_Kills now can convert notation numbers." +
 				"\n\t→Calculate_Kills can now be kept open after calculation." +

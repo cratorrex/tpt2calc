@@ -101,6 +101,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ttAWA = new System.Windows.Forms.ToolTip(this.components);
             this.ttMAccF = new System.Windows.Forms.ToolTip(this.components);
+            this.btnDMT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
@@ -200,7 +201,6 @@
             // 
             this.chkResDrop.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chkResDrop.AutoSize = true;
-            this.chkResDrop.BackColor = System.Drawing.Color.LightGray;
             this.chkResDrop.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkResDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.chkResDrop.Location = new System.Drawing.Point(91, 144);
@@ -846,9 +846,9 @@
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
-            this.lblCV.Size = new System.Drawing.Size(172, 15);
+            this.lblCV.Size = new System.Drawing.Size(74, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.4XXX (Dark Mode Test)";
+            this.lblCV.Text = "Version: 0.4.9";
             // 
             // panel1
             // 
@@ -859,11 +859,22 @@
             this.panel1.Size = new System.Drawing.Size(673, 30);
             this.panel1.TabIndex = 102;
             // 
+            // btnDMT
+            // 
+            this.btnDMT.Location = new System.Drawing.Point(554, 36);
+            this.btnDMT.Name = "btnDMT";
+            this.btnDMT.Size = new System.Drawing.Size(131, 23);
+            this.btnDMT.TabIndex = 103;
+            this.btnDMT.Text = "Toggle Dark Mode";
+            this.btnDMT.UseVisualStyleBackColor = true;
+            this.btnDMT.Click += new System.EventHandler(this.btnDMT_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 490);
+            this.Controls.Add(this.btnDMT);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label6);
@@ -971,6 +982,7 @@
         private System.Windows.Forms.CheckBox chkMAcc;
         private System.Windows.Forms.ToolTip ttMAccF;
         private System.Windows.Forms.CheckBox chkResDrop;
+        private System.Windows.Forms.Button btnDMT;
     }
 }
 
