@@ -215,8 +215,9 @@ namespace tptcalc
 		private double Cost2Disable (double cost, double nth)
 		{
 			cost = Math.Round(cost / 10) * 10;
+            if (nth%1 !=0)
 			nth = Math.Round(nth / 10) * 10;
-			double value = cost*(Math.Pow((cost +(1000-cost)/10),nth-1));//X * ( X + ( ( 1000 - X ) / 10 ) ^ ( n - 1 ) ) 
+            double value = cost*(Math.Pow((cost +(1000-cost)/10),nth-1));//X * ( X + ( ( 1000 - X ) / 10 ) ^ ( n - 1 ) ) 
 			return value;
 		}
 
