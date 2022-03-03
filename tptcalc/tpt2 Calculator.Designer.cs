@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCalculateXP = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbRTorGT = new System.Windows.Forms.ComboBox();
             this.btnCalKill = new System.Windows.Forms.Button();
-            this.cBDifficulty = new System.Windows.Forms.ComboBox();
+            this.cBDiffCS = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.chkCSPD1Element = new System.Windows.Forms.CheckBox();
             this.numS = new System.Windows.Forms.NumericUpDown();
@@ -68,7 +69,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.rtbReturn = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.chkMAcc = new System.Windows.Forms.CheckBox();
@@ -92,6 +93,32 @@
             this.label14 = new System.Windows.Forms.Label();
             this.numBaseDC = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtMDCEst = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtMDC = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.cbModW = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cbModDM = new System.Windows.Forms.ComboBox();
+            this.btnMDC = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtBMDC = new System.Windows.Forms.TextBox();
+            this.txtPMDC = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtModW = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnBlueprintD = new System.Windows.Forms.Button();
             this.ttRDrop = new System.Windows.Forms.ToolTip(this.components);
             this.ttNamedConvert = new System.Windows.Forms.ToolTip(this.components);
             this.lblConvert = new System.Windows.Forms.Label();
@@ -102,6 +129,7 @@
             this.ttAWA = new System.Windows.Forms.ToolTip(this.components);
             this.ttMAccF = new System.Windows.Forms.ToolTip(this.components);
             this.btnDMT = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAwALvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXPLvl)).BeginInit();
@@ -110,13 +138,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.numM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReg)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tcMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -308,7 +343,7 @@
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.cbRTorGT);
             this.groupBox2.Controls.Add(this.btnCalKill);
-            this.groupBox2.Controls.Add(this.cBDifficulty);
+            this.groupBox2.Controls.Add(this.cBDiffCS);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.chkCSPD1Element);
             this.groupBox2.Controls.Add(this.numS);
@@ -351,21 +386,21 @@
             this.btnCalKill.UseVisualStyleBackColor = false;
             this.btnCalKill.Click += new System.EventHandler(this.btnCalKill_Click);
             // 
-            // cBDifficulty
+            // cBDiffCS
             // 
-            this.cBDifficulty.FormattingEnabled = true;
-            this.cBDifficulty.Items.AddRange(new object[] {
+            this.cBDiffCS.FormattingEnabled = true;
+            this.cBDiffCS.Items.AddRange(new object[] {
             "Easy",
-            "Medium/Hard",
-            "Insane",
+            "Medium",
+            "Hard/Insane",
             "Nightmare",
             "Impossible"});
-            this.cBDifficulty.Location = new System.Drawing.Point(152, 105);
-            this.cBDifficulty.Name = "cBDifficulty";
-            this.cBDifficulty.Size = new System.Drawing.Size(94, 21);
-            this.cBDifficulty.TabIndex = 102;
-            this.cBDifficulty.Text = "Easy";
-            this.cBDifficulty.SelectedIndexChanged += new System.EventHandler(this.cBDifficulty_SelectedIndexChanged);
+            this.cBDiffCS.Location = new System.Drawing.Point(152, 105);
+            this.cBDiffCS.Name = "cBDiffCS";
+            this.cBDiffCS.Size = new System.Drawing.Size(94, 21);
+            this.cBDiffCS.TabIndex = 102;
+            this.cBDiffCS.Text = "Easy";
+            this.cBDiffCS.SelectedIndexChanged += new System.EventHandler(this.cBDifficulty_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -555,15 +590,18 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Debug/Error Pane";
             // 
-            // tabControl1
+            // tcMain
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 43);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(673, 319);
-            this.tabControl1.TabIndex = 0;
+            this.tcMain.Controls.Add(this.tabPage1);
+            this.tcMain.Controls.Add(this.tabPage2);
+            this.tcMain.Controls.Add(this.tabPage3);
+            this.tcMain.Location = new System.Drawing.Point(12, 43);
+            this.tcMain.Multiline = true;
+            this.tcMain.Name = "tcMain";
+            this.tcMain.SelectedIndex = 0;
+            this.tcMain.Size = new System.Drawing.Size(673, 319);
+            this.tcMain.TabIndex = 0;
+            this.tcMain.SelectedIndexChanged += new System.EventHandler(this.tcMain_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -575,7 +613,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(665, 293);
             this.tabPage1.TabIndex = 1;
-            this.tabPage1.Text = "ClearSpeedCalculator";
+            this.tabPage1.Text = "Clear Speed Calculator";
             // 
             // groupBox4
             // 
@@ -829,6 +867,275 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Base Disable Cost";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage3.Controls.Add(this.tabControl1);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(665, 293);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Essential Utilities";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(5, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(532, 287);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Controls.Add(this.groupBox6);
+            this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(524, 261);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "Module Drop Chance Calculator";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtMDCEst);
+            this.groupBox7.Controls.Add(this.label31);
+            this.groupBox7.Controls.Add(this.label25);
+            this.groupBox7.Controls.Add(this.txtMDC);
+            this.groupBox7.Controls.Add(this.label24);
+            this.groupBox7.Location = new System.Drawing.Point(343, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(175, 249);
+            this.groupBox7.TabIndex = 17;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Output";
+            // 
+            // txtMDCEst
+            // 
+            this.txtMDCEst.Location = new System.Drawing.Point(9, 89);
+            this.txtMDCEst.Name = "txtMDCEst";
+            this.txtMDCEst.ReadOnly = true;
+            this.txtMDCEst.Size = new System.Drawing.Size(100, 20);
+            this.txtMDCEst.TabIndex = 109;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 70);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(132, 13);
+            this.label31.TabIndex = 108;
+            this.label31.Text = "Estimated rounds for 100%";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(91, 40);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(15, 13);
+            this.label25.TabIndex = 107;
+            this.label25.Text = "%";
+            // 
+            // txtMDC
+            // 
+            this.txtMDC.Location = new System.Drawing.Point(9, 37);
+            this.txtMDC.Name = "txtMDC";
+            this.txtMDC.ReadOnly = true;
+            this.txtMDC.Size = new System.Drawing.Size(100, 20);
+            this.txtMDC.TabIndex = 106;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(95, 13);
+            this.label24.TabIndex = 105;
+            this.label24.Text = "Final Drop Chance";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.cbModW);
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.Controls.Add(this.cbModDM);
+            this.groupBox6.Controls.Add(this.btnMDC);
+            this.groupBox6.Controls.Add(this.label28);
+            this.groupBox6.Controls.Add(this.label27);
+            this.groupBox6.Controls.Add(this.txtBMDC);
+            this.groupBox6.Controls.Add(this.txtPMDC);
+            this.groupBox6.Controls.Add(this.label26);
+            this.groupBox6.Controls.Add(this.label23);
+            this.groupBox6.Controls.Add(this.txtModW);
+            this.groupBox6.Location = new System.Drawing.Point(6, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(331, 249);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Module Drop Chance Calculator";
+            // 
+            // cbModW
+            // 
+            this.cbModW.FormattingEnabled = true;
+            this.cbModW.Items.AddRange(new object[] {
+            "Waves",
+            "Eras",
+            "Infinities"});
+            this.cbModW.Location = new System.Drawing.Point(199, 36);
+            this.cbModW.Name = "cbModW";
+            this.cbModW.Size = new System.Drawing.Size(121, 21);
+            this.cbModW.TabIndex = 18;
+            this.cbModW.Text = "Waves";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(93, 89);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(12, 13);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "x";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(197, 115);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(87, 13);
+            this.label29.TabIndex = 16;
+            this.label29.Text = "Difficulty Modifier";
+            // 
+            // cbModDM
+            // 
+            this.cbModDM.FormattingEnabled = true;
+            this.cbModDM.Items.AddRange(new object[] {
+            "Easy (x1)",
+            "Medium/Hard (x1.5)",
+            "Insane (x2)",
+            "Nightmare (x2.25)",
+            "Impossible (x2.5)"});
+            this.cbModDM.Location = new System.Drawing.Point(200, 130);
+            this.cbModDM.Name = "cbModDM";
+            this.cbModDM.Size = new System.Drawing.Size(121, 21);
+            this.cbModDM.TabIndex = 15;
+            this.cbModDM.Text = "Easy (x1)";
+            // 
+            // btnMDC
+            // 
+            this.btnMDC.Location = new System.Drawing.Point(118, 202);
+            this.btnMDC.Name = "btnMDC";
+            this.btnMDC.Size = new System.Drawing.Size(75, 23);
+            this.btnMDC.TabIndex = 14;
+            this.btnMDC.Text = "Calculate";
+            this.btnMDC.UseVisualStyleBackColor = true;
+            this.btnMDC.Click += new System.EventHandler(this.btnMDC_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(91, 134);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(15, 13);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "%";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 115);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(135, 13);
+            this.label27.TabIndex = 12;
+            this.label27.Text = "Module Base Drop Chance";
+            // 
+            // txtBMDC
+            // 
+            this.txtBMDC.Location = new System.Drawing.Point(9, 131);
+            this.txtBMDC.MaxLength = 7;
+            this.txtBMDC.Name = "txtBMDC";
+            this.txtBMDC.Size = new System.Drawing.Size(100, 20);
+            this.txtBMDC.TabIndex = 11;
+            // 
+            // txtPMDC
+            // 
+            this.txtPMDC.Location = new System.Drawing.Point(9, 86);
+            this.txtPMDC.MaxLength = 7;
+            this.txtPMDC.Name = "txtPMDC";
+            this.txtPMDC.Size = new System.Drawing.Size(100, 20);
+            this.txtPMDC.TabIndex = 10;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 70);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(187, 13);
+            this.label26.TabIndex = 9;
+            this.label26.Text = "Player\'s Module Drop Chance Statistic";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 20);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(237, 13);
+            this.label23.TabIndex = 3;
+            this.label23.Text = "Enter Wave Number (doesn\'t use convert.cs yet)";
+            // 
+            // txtModW
+            // 
+            this.txtModW.Location = new System.Drawing.Point(9, 36);
+            this.txtModW.MaxLength = 11;
+            this.txtModW.Name = "txtModW";
+            this.txtModW.Size = new System.Drawing.Size(184, 20);
+            this.txtModW.TabIndex = 7;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.White;
+            this.tabPage5.Controls.Add(this.label22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(524, 261);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "What is to come";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(3, 3);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(489, 220);
+            this.label22.TabIndex = 0;
+            this.label22.Text = resources.GetString("label22.Text");
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnBlueprintD);
+            this.groupBox5.Location = new System.Drawing.Point(543, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(118, 287);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Opens a Window";
+            // 
+            // btnBlueprintD
+            // 
+            this.btnBlueprintD.Location = new System.Drawing.Point(6, 19);
+            this.btnBlueprintD.Name = "btnBlueprintD";
+            this.btnBlueprintD.Size = new System.Drawing.Size(106, 23);
+            this.btnBlueprintD.TabIndex = 0;
+            this.btnBlueprintD.Text = "Blueprint Decoder";
+            this.btnBlueprintD.UseVisualStyleBackColor = true;
+            this.btnBlueprintD.Click += new System.EventHandler(this.btnBlueprintD_Click);
+            // 
             // lblConvert
             // 
             this.lblConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -846,9 +1153,9 @@
             this.lblCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCV.Location = new System.Drawing.Point(5, 6);
             this.lblCV.Name = "lblCV";
-            this.lblCV.Size = new System.Drawing.Size(74, 15);
+            this.lblCV.Size = new System.Drawing.Size(65, 15);
             this.lblCV.TabIndex = 101;
-            this.lblCV.Text = "Version: 0.4.9";
+            this.lblCV.Text = "Version: 0.5";
             // 
             // panel1
             // 
@@ -861,7 +1168,7 @@
             // 
             // btnDMT
             // 
-            this.btnDMT.Location = new System.Drawing.Point(554, 36);
+            this.btnDMT.Location = new System.Drawing.Point(477, 36);
             this.btnDMT.Name = "btnDMT";
             this.btnDMT.Size = new System.Drawing.Size(131, 23);
             this.btnDMT.TabIndex = 103;
@@ -869,14 +1176,25 @@
             this.btnDMT.UseVisualStyleBackColor = true;
             this.btnDMT.Click += new System.EventHandler(this.btnDMT_Click);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Location = new System.Drawing.Point(614, 36);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(67, 23);
+            this.btnSettings.TabIndex = 104;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 490);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnDMT);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcMain);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rtbReturn);
             this.Name = "Form1";
@@ -892,7 +1210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReg)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tcMain.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -901,6 +1219,16 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDisableN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaseDC)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -938,10 +1266,9 @@
 		private System.Windows.Forms.NumericUpDown numS;
 		private System.Windows.Forms.NumericUpDown numM;
 		private System.Windows.Forms.NumericUpDown numH;
-		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.TabControl tcMain;
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.Button btnDisableCalc;
 		private System.Windows.Forms.NumericUpDown numDisableN;
 		private System.Windows.Forms.TextBox txtIterEDCn;
@@ -969,7 +1296,7 @@
         private System.Windows.Forms.NumericUpDown numAwALvl;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ToolTip ttAWA;
-        private System.Windows.Forms.ComboBox cBDifficulty;
+        private System.Windows.Forms.ComboBox cBDiffCS;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lblDifficulty;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -983,6 +1310,34 @@
         private System.Windows.Forms.ToolTip ttMAccF;
         private System.Windows.Forms.CheckBox chkResDrop;
         private System.Windows.Forms.Button btnDMT;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnBlueprintD;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox cbModDM;
+        private System.Windows.Forms.Button btnMDC;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtBMDC;
+        private System.Windows.Forms.TextBox txtPMDC;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtModW;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtMDCEst;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtMDC;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox cbModW;
+        private System.Windows.Forms.Label label23;
     }
 }
 

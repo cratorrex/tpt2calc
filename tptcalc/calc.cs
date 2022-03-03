@@ -9,6 +9,8 @@ namespace tptcalc
 {
 	public class calc
 	{
+		readonly math_ext math = new math_ext(); //extra stuff for a future addition, to save some time
+
 		public void CXP(double era, double dropstat, NumericUpDown xpmod, NumericUpDown awamod, TextBox LowX, TextBox HighX, TextBox AveX, RichTextBox debug,
 						CheckBox checkbox2log)
 		{
@@ -155,7 +157,7 @@ namespace tptcalc
             }
         }
 
-		private double cb2Difficulty(ComboBox c2d, CheckBox wc)
+		private double cb2Difficulty(ComboBox c2d, CheckBox wc) //enemies per wave
         {
 			if (wc.Checked)
 			{
@@ -220,6 +222,45 @@ namespace tptcalc
             double value = cost*(Math.Pow((cost +(1000-cost)/10),nth-1));//X * ( X + ( ( 1000 - X ) / 10 ) ^ ( n - 1 ) ) 
 			return value;
 		}
+
+
+		public void MDC(double wave, int countMod, double playerMod, double baseMod, int diff, //inputs
+						TextBox dropchance, TextBox estimate) //outputs
+        {
+			double waveMod, mdc;
+			double diffMod = Diff2MDC(diff);
+
+			waveMod = Math.Log10(wave) + WaveAddLog(countMod);
+			mdc = waveMod * playerMod * baseMod * diffMod;
+			dropchance.Text = mdc.ToString("#,0.###");
+			estimate.Text = Math.Ceiling(100 / mdc).ToString();
+        }
+
+		private double Diff2MDC(int d)
+        {
+            switch (d)
+            {
+				case 1:
+					return 1.5;
+				case 2:
+					return 2;
+				case 3:
+					return 2.25;
+				case 4:
+					return 2.5;
+				default:
+					return 1;
+            }
+        }
+		private int WaveAddLog(int c)
+        {
+			switch (c)
+            {
+				case 1:	 return 11;
+				case 2:  return 22;
+				default: return 0;
+            }
+        }
 
 	}
 }

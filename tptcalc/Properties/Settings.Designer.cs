@@ -34,5 +34,53 @@ namespace tptcalc.Properties {
                 this["ADark"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool restTab {
+            get {
+                return ((bool)(this["restTab"]));
+            }
+            set {
+                this["restTab"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int restTabIndex_Main {
+            get {
+                return ((int)(this["restTabIndex_Main"]));
+            }
+            set {
+                this["restTabIndex_Main"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool openCalK {
+            get {
+                return ((bool)(this["openCalK"]));
+            }
+            set {
+                this["openCalK"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool openBPD {
+            get {
+                return ((bool)(this["openBPD"]));
+            }
+            set {
+                this["openBPD"] = value;
+            }
+        }
     }
 }
