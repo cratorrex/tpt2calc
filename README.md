@@ -3,25 +3,23 @@ Check the Releases section to download the calculator.
 ##### Allows support for "short named" and "scientific" notations! (on top of full notation)
 ###### Unsure of how to make it into a web application so if anyone wants to, feel free!
 
-## Latest Version `0.4X >`<a href="https://github.com/cratorrex/tpt2eracalc/releases/tag/0.4.9">`0.4.9`</a>
-##### `0.4.9` Dark Mode!!!
-##### `0.4X` A very major Expansion update to the Clear Speed Calculator courtesy of BudEBoy!
-  - Fixed errors when inputting `float` values to some textboxes where they accepted `long`.
-  - Added a bit more support for ***Named Notation*** (added **q** for e15 and **Q** for e18)
-###### `CSPD Calculator`
-  - Added Calculator to help accurately measure kills in the current run.
-  - Added back Real Time to Game Time conversions (default is Real Time), and x3 speed can be factored in (on by default).
-  - Added Wave Compression toggle (on by default).
-  - Added Kills/sec calculation.
-  - Added a more accurate formula, courtesy of bud.
-##### `0.4XX` Bug Fixes
-  - Fixed Resource Dropstat always returning 0.
-  - Fixed CSpdCalc UI.
-  - Added log10 support for EraXPCalc.
-##### `0.4XXX` Fixes and Adds
-  - Added an extra safeguard when using Calculate_Kills in the case they forgot to uncheck "Calculate for one Element".
-  - Calculate_Kills now can convert notation numbers.
-  - Calculate_Kills can now be kept open after calculation.
+## Latest Version `0.4.9 >`<a href="https://github.com/cratorrex/tpt2eracalc/releases/tag/0.5">`0.5`</a>
+
+New Utilities!
+
+  - Essential Utilities: Module Drop Chance Calculator (MDCcalc)
+  - Essential Utilities: Blueprint Decoder
+
+Changes
+
+  - A friendlier dark mode suggested by Rak.
+  - Renamed Form1 to tpt Calculator, also suggested by Rak.
+  - Added "math_ext.cs" to facilitate some future stuff... 👀
+
+Some new settings
+
+  - Remember tab
+  - Open Utilities on Startup
 
 ## EraXPCalculator
   Basically calculates the expected amount of xp you'd get from era enemies.<br/>
@@ -53,6 +51,15 @@ Check the Releases section to download the calculator.
    Note: The result of the calculation will be more accurate with more kills and time spent in the run.
       The clearspeed should be the same throughout all your rounds regardless of region.
    #### Includes a more accurate Clear Speed formula courtesy of BudEBoy!
+
+## ModuleDropChanceCalculator
+  Calculates a module's drop chance based on Wave, Difficulty, Player's Module Drop Chance Statistic, and the Module's Base Drop Chance.
+  
+  Estimates how many rounds (rounded up) it will take, on average, with the given inputs, to get a cumulative 100% drop chance.
+  
+## Helper Utilities
+  - Blueprint Decoder (a base64 decoder with some extra code formatting)
+ 
 
    #  
    Ping me `@cratorrex.rx#3589` on discord if you have some suggestions on what I should add to the calculator utility! :J
